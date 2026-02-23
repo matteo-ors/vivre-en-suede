@@ -22,30 +22,5 @@ Disallow: /404.html
 # Bloquer les fichiers système
 Disallow: /.DS_Store
 
-# Crawl-delay pour ne pas surcharger le serveur
-Crawl-delay: 1
-
-# Bots IA - bloquer le scraping de contenu
-User-agent: GPTBot
-Disallow: /
-
-User-agent: ChatGPT-User
-Disallow: /
-
-User-agent: CCBot
-Disallow: /
-
-User-agent: anthropic-ai
-Disallow: /
-
-User-agent: Google-Extended
-Disallow: /
-
-User-agent: Bytespider
-Disallow: /
-
-User-agent: ClaudeBot
-Disallow: /
-
 # Sitemap
 Sitemap: https://www.vivre-en-suede.com/sitemap.xml
