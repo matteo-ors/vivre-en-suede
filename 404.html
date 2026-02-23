@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Page introuvable - Vivre en Suède</title>
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="icon" href="/images/favicon.svg" type="image/svg+xml">
+  <style>
+    .error-page {
+      min-height: 60vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: var(--space-12) var(--space-4);
+    }
+    .error-code {
+      font-size: 6rem;
+      font-weight: 800;
+      color: var(--primary);
+      line-height: 1;
+      margin-bottom: var(--space-4);
+    }
+    .error-page h1 {
+      font-size: var(--text-2xl);
+      margin-bottom: var(--space-4);
+    }
+    .error-page p {
+      font-size: var(--text-lg);
+      color: var(--text-secondary);
+      margin-bottom: var(--space-8);
+      max-width: 500px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .error-links {
+      display: flex;
+      gap: var(--space-4);
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+  </style>
+</head>
+<body>
+
+  <header class="header">
+    <div class="container">
+      <nav class="nav">
+        <a href="/" class="header-logo">
+          <span class="header-logo-text">Vivre en <span>Suède</span></span>
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="error-page">
+    <div>
+      <div class="error-code">404</div>
+      <h1>Page introuvable</h1>
+      <p>Désolé, la page que vous recherchez n'existe pas ou a été déplacée.</p>
+      <div class="error-links">
+        <a href="/" class="btn btn-primary">Retour à l'accueil</a>
+        <a href="/pages/villes/" class="btn btn-outline">Explorer les villes</a>
+        <a href="/pages/preparer-depart/" class="btn btn-outline">Préparer son départ</a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <p>&copy; 2025 Vivre en Suède. Tous droits réservés.</p>
+        <p style="margin-top: 0.5rem;"><a href="https://www.vivre-en-norvege.com" target="_blank" rel="noopener" style="color: inherit; text-decoration: underline;">🇳🇴 Découvrez aussi Vivre en Norvège</a></p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
