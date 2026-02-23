@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="canonical" href="https://www.vivre-en-suede.com/pages/outils/ansokan/" />
+  <meta name="description" content="Generateur gratuit de Ansökan (lettre de motivation suédoise). Creez une lettre adaptee aux conventions suédoises pour vos candidatures en Suède.">
+  <title>Generateur de Ansökan - Lettre de motivation suédoise | Vivre en Suède</title>
+  <link rel="stylesheet" href="/css/main.css">
+  <style>
+    .ansokan-form { display: flex; flex-direction: column; gap: 1.5rem; }
+    .ansokan-form label { font-weight: 600; display: block; margin-bottom: 0.4rem; color: var(--text-dark, #1a1a2e); }
+    .ansokan-form input,
+    .ansokan-form textarea,
+    .ansokan-form select { width: 100%; padding: 0.75rem 1rem; border: 2px solid #e0e0e0; border-radius: 8px; font-size: 1rem; font-family: inherit; transition: border-color 0.2s; }
+    .ansokan-form input:focus,
+    .ansokan-form textarea:focus,
+    .ansokan-form select:focus { outline: none; border-color: var(--primary, #2563eb); }
+    .ansokan-form textarea { resize: vertical; min-height: 100px; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+    @media (max-width: 600px) { .form-row { grid-template-columns: 1fr; } }
+    .form-group { display: flex; flex-direction: column; }
+    .form-hint { font-size: 0.85rem; color: #666; margin-top: 0.25rem; }
+
+    .steps-indicator { display: flex; gap: 0.5rem; margin-bottom: 2rem; }
+    .step-dot { width: 40px; height: 6px; border-radius: 3px; background: #e0e0e0; transition: background 0.3s; }
+    .step-dot.active { background: var(--primary, #2563eb); }
+    .step-dot.completed { background: var(--success, #16a34a); }
+
+    .form-step { display: none; }
+    .form-step.active { display: block; }
+
+    .form-nav { display: flex; justify-content: space-between; margin-top: 1.5rem; gap: 1rem; }
+    .form-nav .btn { min-width: 140px; }
+
+    .ansokan-preview { background: #fff; border: 2px solid #e0e0e0; border-radius: 12px; padding: 2rem; font-family: 'Georgia', serif; line-height: 1.8; white-space: pre-wrap; min-height: 300px; color: #333; }
+    .ansokan-preview-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; flex-wrap: wrap; gap: 0.5rem; }
+    .ansokan-preview-actions { display: flex; gap: 0.75rem; flex-wrap: wrap; }
+    .btn-copy, .btn-reset { padding: 0.6rem 1.2rem; border: 2px solid var(--primary, #2563eb); border-radius: 8px; font-weight: 600; cursor: pointer; font-size: 0.9rem; transition: all 0.2s; }
+    .btn-copy { background: var(--primary, #2563eb); color: #fff; }
+    .btn-copy:hover { opacity: 0.9; }
+    .btn-reset { background: transparent; color: var(--primary, #2563eb); }
+    .btn-reset:hover { background: var(--primary, #2563eb); color: #fff; }
+    .copy-feedback { color: var(--success, #16a34a); font-weight: 600; font-size: 0.9rem; display: none; align-items: center; gap: 0.3rem; }
+
+    .comparison-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-top: 1.5rem; }
+    @media (max-width: 700px) { .comparison-grid { grid-template-columns: 1fr; } }
+    .comparison-card { border-radius: 12px; padding: 1.5rem; }
+    .comparison-bad { background: #fef2f2; border: 2px solid #fecaca; }
+    .comparison-good { background: #f0fdf4; border: 2px solid #bbf7d0; }
+    .comparison-card h4 { margin-bottom: 0.75rem; }
+    .comparison-card p { font-size: 0.95rem; line-height: 1.6; font-style: italic; }
+
+    .tips-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-top: 1.5rem; }
+    .tip-card { background: #f8fafc; border: 2px solid #e2e8f0; border-radius: 12px; padding: 1.5rem; }
+    .tip-card h4 { margin-bottom: 0.5rem; }
+    .tip-card p { font-size: 0.95rem; color: #555; }
+
+    .step-title { font-size: 1.15rem; font-weight: 700; margin-bottom: 1rem; color: var(--text-dark, #1a1a2e); }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="header-container">
+      <a href="/" class="header-logo"><span class="header-logo-text">🇸🇪 Vivre en <span>Suède</span></span></a>
+      <nav class="main-nav">
+        <ul>
+          <li class="nav-mega-dropdown">
+            <a href="/pages/preparer-depart/">Guides pratiques</a>
+            <div class="nav-mega-menu">
+              <div class="nav-mega-column">
+                <span class="nav-mega-title">S'installer</span>
+                <a href="/pages/preparer-depart/">Préparer son départ</a>
+                <a href="/pages/preparer-depart/compte-bancaire/">Ouvrir un compte bancaire</a>
+                <a href="/pages/preparer-depart/personnummer/">Obtenir le Personnummer</a>
+                <a href="/pages/preparer-depart/logement/">Trouver un logement</a>
+                <a href="/pages/preparer-depart/demenagement/">Déménagement</a>
+                <a href="/pages/preparer-depart/travail/">Travailler en Suède</a>
+                <a href="/pages/preparer-depart/creation-entreprise/">Création d'entreprise</a>
+              </div>
+              <div class="nav-mega-column">
+                <span class="nav-mega-title">Vie quotidienne</span>
+                <a href="/pages/cout-vie/">Coût de la vie</a>
+                <a href="/pages/fiscalite/">Fiscalité</a>
+                <a href="/pages/sante/">Santé</a>
+                <a href="/pages/education/">Éducation</a>
+              </div>
+            </div>
+          </li>
+          <li class="nav-dropdown">
+            <a href="/pages/villes/">Villes</a>
+            <div class="nav-dropdown-menu">
+              <a href="/pages/villes/stockholm/">Stockholm</a>
+              <a href="/pages/villes/goteborg/">Göteborg</a>
+              <a href="/pages/villes/malmo/">Malmö</a>
+              <a href="/pages/villes/uppsala/">Uppsala</a>
+              <a href="/pages/villes/linkoping/">Linköping</a>
+              <a href="/pages/villes/">Toutes les villes →</a>
+            </div>
+          </li>
+          <li class="nav-dropdown">
+            <a href="/pages/outils/" class="active">Outils</a>
+            <div class="nav-dropdown-menu">
+              <a href="/pages/outils/convertisseur/">Convertisseur EUR/SEK</a>
+              <a href="/pages/outils/ansokan/">Générateur d'Ansökan</a>
+              <a href="/pages/outils/budget/">Simulateur de budget</a>
+              <a href="/pages/outils/quiz/">Quiz : Où vivre ?</a>
+            </div>
+          </li>
+            <li><a href="/pages/a-propos/">À propos</a></li>
+        </ul>
+      </nav>
+      <a href="/pages/outils/quiz/" class="btn btn-primary btn-sm header-cta">Quiz : Ma ville idéale</a>
+      <button class="mobile-menu-toggle" aria-label="Ouvrir le menu"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <button class="mobile-menu-close" aria-label="Fermer le menu">&times;</button>
+    <ul>
+      <li class="mobile-nav-group">
+        <button class="mobile-nav-toggle">Guides pratiques <span class="mobile-nav-arrow">›</span></button>
+        <ul class="mobile-nav-sub">
+          <li class="mobile-nav-subtitle">S'installer</li>
+          <li><a href="/pages/preparer-depart/">Préparer son départ</a></li>
+          <li><a href="/pages/preparer-depart/compte-bancaire/">Compte bancaire</a></li>
+          <li><a href="/pages/preparer-depart/personnummer/">Personnummer</a></li>
+          <li><a href="/pages/preparer-depart/logement/">Logement</a></li>
+          <li><a href="/pages/preparer-depart/demenagement/">Déménagement</a></li>
+          <li><a href="/pages/preparer-depart/travail/">Travail</a></li>
+          <li><a href="/pages/preparer-depart/creation-entreprise/">Création d'entreprise</a></li>
+          <li class="mobile-nav-subtitle">Vie quotidienne</li>
+          <li><a href="/pages/cout-vie/">Coût de la vie</a></li>
+          <li><a href="/pages/fiscalite/">Fiscalité</a></li>
+          <li><a href="/pages/sante/">Santé</a></li>
+          <li><a href="/pages/education/">Éducation</a></li>
+        </ul>
+      </li>
+      <li class="mobile-nav-group">
+        <button class="mobile-nav-toggle">Villes <span class="mobile-nav-arrow">›</span></button>
+        <ul class="mobile-nav-sub">
+          <li><a href="/pages/villes/stockholm/">Stockholm</a></li>
+          <li><a href="/pages/villes/goteborg/">Göteborg</a></li>
+          <li><a href="/pages/villes/malmo/">Malmö</a></li>
+          <li><a href="/pages/villes/uppsala/">Uppsala</a></li>
+          <li><a href="/pages/villes/linkoping/">Linköping</a></li>
+          <li><a href="/pages/villes/">Toutes les villes →</a></li>
+        </ul>
+      </li>
+      <li class="mobile-nav-group">
+        <button class="mobile-nav-toggle">Outils <span class="mobile-nav-arrow">›</span></button>
+        <ul class="mobile-nav-sub">
+          <li><a href="/pages/outils/convertisseur/">Convertisseur EUR/SEK</a></li>
+          <li><a href="/pages/outils/ansokan/">Générateur d'Ansökan</a></li>
+          <li><a href="/pages/outils/budget/">Simulateur de budget</a></li>
+          <li><a href="/pages/outils/quiz/">Quiz : Où vivre ?</a></li>
+        </ul>
+      </li>
+        <li><a href="/pages/a-propos/">À propos</a></li>
+      <li><a href="/pages/outils/quiz/">Quiz : Ma ville idéale</a></li>
+    </ul>
+  </div>
+
+  <!-- HERO -->
+  <section class="hero-mini">
+    <div class="container">
+      <div class="hero-content">
+        <nav class="breadcrumb">
+          <a href="/">Accueil</a>
+          <span class="breadcrumb-separator">&rsaquo;</span>
+          <a href="/pages/outils/">Simulateurs gratuits</a>
+          <span class="breadcrumb-separator">&rsaquo;</span>
+          <span class="breadcrumb-current">Generateur de Ansökan</span>
+        </nav>
+        <h1 class="hero-title">Generateur de Ansökan</h1>
+        <p class="hero-subtitle">Creez votre lettre de motivation a la suédoise en quelques minutes</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHAT IS A SOKNAD -->
+  <section class="section">
+    <div class="container container-md">
+      <h2>Qu'est-ce qu'une Ansökan ?</h2>
+      <p>La <strong>ansokan</strong> (ou ansökningsbrev) est la lettre de motivation suédoise. Elle accompagne votre CV lors d'une candidature et joue un role essentiel dans le processus de recrutement en Suède.</p>
+      <p>Contrairement a la lettre de motivation francaise, la ansokan se distingue par plusieurs points :</p>
+
+      <div class="comparison-grid">
+        <div class="comparison-card comparison-bad">
+          <h4>Lettre de motivation francaise</h4>
+          <ul>
+            <li>Ton tres formel, parfois rigide</li>
+            <li>Formules de politesse longues et elaborees</li>
+            <li>Structure codifiee (vous/je/nous)</li>
+            <li>Souvent une page entiere</li>
+            <li>Met en avant les diplomes</li>
+          </ul>
+        </div>
+        <div class="comparison-card comparison-good">
+          <h4>Ansökan suédoise</h4>
+          <ul>
+            <li>Ton professionnel mais decontracte</li>
+            <li>Formules de politesse courtes et directes</li>
+            <li>Structure libre, axee sur la pertinence</li>
+            <li>Concise : demi-page a une page max</li>
+            <li>Met en avant l'experience et les competences pratiques</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="callout callout-info mt-8">
+        <div class="callout-title">A savoir</div>
+        <p class="callout-content">En Suède, le tutoiement est la norme, meme en contexte professionnel. N'utilisez jamais de formules comme &laquo; Madame, Monsieur &raquo; ou &laquo; Veuillez agreer l'expression de mes sentiments distingues &raquo;. Un simple &laquo; Med vennlig hilsen &raquo; (Cordialement) suffit.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- GENERATOR -->
+  <section class="section section-alt" id="generateur">
+    <div class="container container-md">
+      <h2 class="text-center mb-8">Creez votre Ansökan</h2>
+
+      <div class="simulator-container">
+        <!-- Steps indicator -->
+        <div class="steps-indicator">
+          <div class="step-dot active" data-step="1"></div>
+          <div class="step-dot" data-step="2"></div>
+          <div class="step-dot" data-step="3"></div>
+          <div class="step-dot" data-step="4"></div>
+        </div>
+
+        <form class="ansokan-form" id="ansokanForm">
+
+          <!-- Step 1: Personal info -->
+          <div class="form-step active" data-step="1">
+            <div class="step-title">Etape 1 : Vos informations</div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="fullName">Votre nom complet</label>
+                <input type="text" id="fullName" placeholder="Ex : Marie Dupont" required>
+              </div>
+              <div class="form-group">
+                <label for="email">Votre email</label>
+                <input type="email" id="email" placeholder="Ex : marie.dupont@email.com">
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="phone">Telephone</label>
+                <input type="tel" id="phone" placeholder="Ex : +47 123 45 678">
+              </div>
+              <div class="form-group">
+                <label for="city">Ville de residence</label>
+                <input type="text" id="city" placeholder="Ex : Stockholm">
+              </div>
+            </div>
+            <div class="form-nav">
+              <div></div>
+              <button type="button" class="btn btn-primary" onclick="nextStep()">Suivant</button>
+            </div>
+          </div>
+
+          <!-- Step 2: Position info -->
+          <div class="form-step" data-step="2">
+            <div class="step-title">Etape 2 : Le poste vise</div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="position">Intitule du poste</label>
+                <input type="text" id="position" placeholder="Ex : Utvikler (Developpeur)" required>
+              </div>
+              <div class="form-group">
+                <label for="company">Nom de l'entreprise</label>
+                <input type="text" id="company" placeholder="Ex : Equinor" required>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="source">Ou avez-vous trouve l'annonce ?</label>
+              <select id="source">
+                <option value="blocket.se">Blocket.se</option>
+                <option value="LinkedIn">LinkedIn</option>
+                <option value="le site de l'entreprise">Site de l'entreprise</option>
+                <option value="Arbetsförmedlingen">Arbetsförmedlingen.se</option>
+                <option value="une recommandation">Recommandation / Reseau</option>
+                <option value="autre">Autre</option>
+              </select>
+            </div>
+            <div class="form-nav">
+              <button type="button" class="btn btn-reset" onclick="prevStep()">Precedent</button>
+              <button type="button" class="btn btn-primary" onclick="nextStep()">Suivant</button>
+            </div>
+          </div>
+
+          <!-- Step 3: Experience & skills -->
+          <div class="form-step" data-step="3">
+            <div class="step-title">Etape 3 : Votre profil</div>
+            <div class="form-group">
+              <label for="experience">Votre experience pertinente pour ce poste</label>
+              <textarea id="experience" rows="4" placeholder="Decrivez brievement votre parcours et vos experiences les plus pertinentes pour ce poste. En Suède, on valorise le concret : mentionnez des resultats, des projets, des chiffres." required></textarea>
+              <span class="form-hint">Soyez concis et axe sur les resultats concrets.</span>
+            </div>
+            <div class="form-group">
+              <label for="skills">Competences cles (separees par des virgules)</label>
+              <input type="text" id="skills" placeholder="Ex : Python, gestion de projet, suédois B2, travail en equipe">
+              <span class="form-hint">Mentionnez vos competences techniques et humaines.</span>
+            </div>
+            <div class="form-nav">
+              <button type="button" class="btn btn-reset" onclick="prevStep()">Precedent</button>
+              <button type="button" class="btn btn-primary" onclick="nextStep()">Suivant</button>
+            </div>
+          </div>
+
+          <!-- Step 4: Motivation -->
+          <div class="form-step" data-step="4">
+            <div class="step-title">Etape 4 : Votre motivation</div>
+            <div class="form-group">
+              <label for="whyCompany">Pourquoi cette entreprise ?</label>
+              <textarea id="whyCompany" rows="3" placeholder="Qu'est-ce qui vous attire dans cette entreprise ? Ses valeurs, ses projets, sa culture ? Les recruteurs suédoiss apprecient la sincerite." required></textarea>
+              <span class="form-hint">Montrez que vous avez fait des recherches sur l'entreprise.</span>
+            </div>
+            <div class="form-group">
+              <label for="whySweden">Pourquoi la Suède ? (optionnel, si vous etes expatrie)</label>
+              <textarea id="whySweden" rows="3" placeholder="Si vous etes francophone expatrie en Suède, expliquez brievement votre lien avec le pays. Inutile d'ecrire un roman : une ou deux phrases suffisent."></textarea>
+            </div>
+            <div class="form-group">
+              <label for="tone">Ton de la lettre</label>
+              <select id="tone">
+                <option value="standard">Professionnel et accessible (recommande)</option>
+                <option value="formal">Plus formel (secteurs traditionnels)</option>
+                <option value="casual">Decontracte (startups, creatif)</option>
+              </select>
+            </div>
+            <div class="form-nav">
+              <button type="button" class="btn btn-reset" onclick="prevStep()">Precedent</button>
+              <button type="button" class="btn btn-primary" onclick="generateAnsökan()">Generer ma Ansökan</button>
+            </div>
+          </div>
+        </form>
+
+        <!-- Preview -->
+        <div id="previewSection" style="display:none; margin-top: 2rem;">
+          <div class="ansokan-preview-header">
+            <h3>Votre Ansökan</h3>
+            <div class="ansokan-preview-actions">
+              <span class="copy-feedback" id="copyFeedback">Copie !</span>
+              <button class="btn-copy" onclick="copyAnsökan()">Copier le texte</button>
+              <button class="btn-reset" onclick="resetForm()">Recommencer</button>
+            </div>
+          </div>
+          <div class="ansokan-preview" id="ansokanPreview"></div>
+          <div class="callout callout-info mt-8">
+            <div class="callout-title">Prochaine etape</div>
+            <p class="callout-content">Ce texte est un point de depart. Relisez-le, personnalisez-le avec vos propres mots et adaptez-le a l'annonce specifique. Faites relire par un Suédois si possible !</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TIPS FROM INGRID -->
+  <section class="section">
+    <div class="container container-md">
+      <div class="callout callout-conseil">
+        <div class="callout-title">Conseils d'Ingrid pour vos candidatures en Suède</div>
+        <p class="callout-content">J'ai recrute et ete recrutee en Suède. La plus grosse erreur des francophones ? Ecrire une lettre trop longue et trop formelle. Les Suédois veulent savoir ce que vous pouvez apporter concretement. Pas de blabla, pas de formules vides. Allez droit au but, soyez honnete, et montrez que vous connaissez l'entreprise.</p>
+        <span class="signature">-- Ingrid</span>
+      </div>
+
+      <h3 class="mt-8">Les regles d'or de la Ansökan</h3>
+
+      <div class="tips-grid">
+        <div class="tip-card">
+          <h4>Soyez concis</h4>
+          <p>Une demi-page a une page maximum. Les recruteurs suédoiss lisent des dizaines de candidatures : allez a l'essentiel.</p>
+        </div>
+        <div class="tip-card">
+          <h4>Restez authentique</h4>
+          <p>En Suède, la sincerite est une valeur fondamentale (le fameux janteloven). Ne survendez pas vos competences, soyez factuel.</p>
+        </div>
+        <div class="tip-card">
+          <h4>Personnalisez chaque lettre</h4>
+          <p>Montrez que vous avez lu l'annonce et que vous connaissez l'entreprise. Les lettres generiques sont immediatement repérées.</p>
+        </div>
+        <div class="tip-card">
+          <h4>Privilegiez l'experience</h4>
+          <p>Contrairement a la France, les diplomes comptent moins que l'experience pratique et les resultats obtenus.</p>
+        </div>
+        <div class="tip-card">
+          <h4>Tutoyez (ou presque)</h4>
+          <p>Le ton est beaucoup moins formel qu'en France. Pas de &laquo; Monsieur le Directeur &raquo;. Un &laquo; Hei &raquo; suivi du prenom est courant.</p>
+        </div>
+        <div class="tip-card">
+          <h4>Mentionnez le suédois</h4>
+          <p>Si vous parlez suédois (meme un peu), dites-le. C'est un atout majeur. Sinon, montrez votre volonte d'apprendre.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GOOD VS BAD EXAMPLES -->
+  <section class="section section-alt">
+    <div class="container container-md">
+      <h2 class="text-center mb-8">Bonnes et mauvaises pratiques</h2>
+
+      <h3>L'introduction</h3>
+      <div class="comparison-grid">
+        <div class="comparison-card comparison-bad">
+          <h4>A eviter</h4>
+          <p>&laquo; Madame, Monsieur, suite a votre annonce parue sur le site Blocket.se en date du 15 janvier, j'ai l'honneur de vous presenter ma candidature au poste de developpeur. Titulaire d'un Master en informatique de l'Universite Paris-Saclay... &raquo;</p>
+        </div>
+        <div class="comparison-card comparison-good">
+          <h4>A privilegier</h4>
+          <p>&laquo; Hei! Jeg soker pa stillingen som utvikler hos Equinor. Med tre ars erfaring innen fullstack-utvikling og en sterk interesse for energisektoren, tror jeg at jeg kan bidra positivt til teamet deres. &raquo;</p>
+        </div>
+      </div>
+
+      <h3 class="mt-8">La conclusion</h3>
+      <div class="comparison-grid">
+        <div class="comparison-card comparison-bad">
+          <h4>A eviter</h4>
+          <p>&laquo; Dans l'attente d'une reponse favorable de votre part, je vous prie de bien vouloir agreer, Madame, Monsieur, l'expression de mes salutations les plus distinguees. &raquo;</p>
+        </div>
+        <div class="comparison-card comparison-good">
+          <h4>A privilegier</h4>
+          <p>&laquo; Jeg ser frem til a hore fra dere og stiller gjerne til et intervju. Med vennlig hilsen, Marie Dupont. &raquo;</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- OTHER TOOLS -->
+  <section class="section">
+    <div class="container">
+      <h2 class="text-center mb-8">Autres outils</h2>
+      <div class="grid grid-3">
+        <a href="/pages/outils/convertisseur/" class="tool-card">
+          <div class="tool-icon">&#128177;</div>
+          <h3>Convertisseur EUR/SEK</h3>
+          <p>Convertissez vos euros en couronnes</p>
+        </a>
+        <a href="/pages/outils/budget/" class="tool-card">
+          <div class="tool-icon">&#128202;</div>
+          <h3>Simulateur de budget</h3>
+          <p>Estimez vos depenses mensuelles</p>
+        </a>
+        <a href="/pages/outils/quiz/" class="tool-card">
+          <div class="tool-icon">&#127919;</div>
+          <h3>Quiz villes</h3>
+          <p>Trouvez votre ville ideale</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <span class="header-logo-text">🇸🇪 Vivre en <span>Suède</span></span>
+          <p>Le guide complet pour reussir votre expatriation.</p>
+        </div>
+        <div>
+          <h4 class="footer-title">Guides</h4>
+          <ul class="footer-links">
+            <li><a href="/pages/cout-vie/">Cout de la vie</a></li>
+            <li><a href="/pages/fiscalite/">Fiscalite</a></li>
+            <li><a href="/pages/sante/">Sante</a></li>
+            <li><a href="/pages/villes/">Villes</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-title">Simulateurs</h4>
+          <ul class="footer-links">
+            <li><a href="/pages/outils/convertisseur/">Convertisseur EUR/SEK</a></li>
+            <li><a href="/pages/outils/ansokan/">Generateur de Ansökan</a></li>
+            <li><a href="/pages/outils/budget/">Simulateur de budget</a></li>
+            <li><a href="/pages/outils/quiz/">Quiz villes</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-title">A propos</h4>
+          <ul class="footer-links">
+            <li><a href="/pages/a-propos/">Qui sommes-nous</a></li>
+            <li><a href="/pages/outils/quiz/">Quiz : Ma ville idéale</a></li>
+              </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Vivre en Suède</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // ===== SOKNAD GENERATOR =====
+    let currentStep = 1;
+    const totalSteps = 4;
+
+    function updateSteps() {
+      document.querySelectorAll('.form-step').forEach(s => s.classList.remove('active'));
+      document.querySelector(`.form-step[data-step="${currentStep}"]`).classList.add('active');
+      document.querySelectorAll('.step-dot').forEach(dot => {
+        const step = parseInt(dot.dataset.step);
+        dot.classList.remove('active', 'completed');
+        if (step === currentStep) dot.classList.add('active');
+        else if (step < currentStep) dot.classList.add('completed');
+      });
+    }
+
+    function nextStep() {
+      // Validate current step required fields
+      const currentFields = document.querySelectorAll(`.form-step[data-step="${currentStep}"] [required]`);
+      let valid = true;
+      currentFields.forEach(field => {
+        if (!field.value.trim()) {
+          field.style.borderColor = '#ef4444';
+          valid = false;
+          field.addEventListener('input', function handler() {
+            field.style.borderColor = '#e0e0e0';
+            field.removeEventListener('input', handler);
+          });
+        }
+      });
+      if (!valid) return;
+
+      if (currentStep < totalSteps) {
+        currentStep++;
+        updateSteps();
+      }
+    }
+
+    function prevStep() {
+      if (currentStep > 1) {
+        currentStep--;
+        updateSteps();
+      }
+    }
+
+    function getVal(id) {
+      return document.getElementById(id).value.trim();
+    }
+
+    function generateAnsökan() {
+      // Validate step 4
+      const currentFields = document.querySelectorAll(`.form-step[data-step="4"] [required]`);
+      let valid = true;
+      currentFields.forEach(field => {
+        if (!field.value.trim()) {
+          field.style.borderColor = '#ef4444';
+          valid = false;
+          field.addEventListener('input', function handler() {
+            field.style.borderColor = '#e0e0e0';
+            field.removeEventListener('input', handler);
+          });
+        }
+      });
+      if (!valid) return;
+
+      const fullName = getVal('fullName');
+      const email = getVal('email');
+      const phone = getVal('phone');
+      const city = getVal('city');
+      const position = getVal('position');
+      const company = getVal('company');
+      const source = document.getElementById('source').value;
+      const experience = getVal('experience');
+      const skills = getVal('skills');
+      const whyCompany = getVal('whyCompany');
+      const whySweden = getVal('whySweden');
+      const tone = document.getElementById('tone').value;
+
+      const today = new Date();
+      const dateStr = today.toLocaleDateString('nb-NO', { day: 'numeric', month: 'long', year: 'numeric' });
+
+      // Build skills list
+      const skillsList = skills ? skills.split(',').map(s => s.trim()).filter(s => s).join(', ') : '';
+
+      // Greeting based on tone
+      let greeting, closing, opener, signoff;
+      if (tone === 'casual') {
+        greeting = 'Hei!';
+        closing = 'Haper a hore fra dere snart!';
+        signoff = 'Vennlig hilsen,';
+        opener = `Jeg skriver for a soke pa stillingen som ${position} hos ${company}, som jeg fant via ${source}.`;
+      } else if (tone === 'formal') {
+        greeting = `Til ${company},`;
+        closing = 'Jeg ser frem til muligheten for et intervju og til a diskutere hvordan jeg kan bidra til deres team.';
+        signoff = 'Med vennlig hilsen,';
+        opener = `Jeg onsker herved a soke pa stillingen som ${position} hos ${company}, utlyst pa ${source}.`;
+      } else {
+        greeting = 'Hei,';
+        closing = 'Jeg ser frem til a hore fra dere, og stiller gjerne til en samtale.';
+        signoff = 'Med vennlig hilsen,';
+        opener = `Jeg soker pa stillingen som ${position} hos ${company}, som jeg fant via ${source}.`;
+      }
+
+      // Build the letter
+      let letter = '';
+
+      // Header info
+      letter += `${fullName}\n`;
+      if (email) letter += `${email}\n`;
+      if (phone) letter += `${phone}\n`;
+      if (city) letter += `${city}\n`;
+      letter += `\n${dateStr}\n\n`;
+
+      // Subject line
+      letter += `Ansökan: ${position}\n\n`;
+
+      // Greeting
+      letter += `${greeting}\n\n`;
+
+      // Opening
+      letter += `${opener}\n\n`;
+
+      // Experience paragraph
+      letter += `${experience}\n\n`;
+
+      // Skills
+      if (skillsList) {
+        letter += `Mine viktigste kompetanser inkluderer: ${skillsList}.\n\n`;
+      }
+
+      // Why this company
+      letter += `${whyCompany}\n\n`;
+
+      // Why Sweden (optional)
+      if (whySweden) {
+        letter += `${whySweden}\n\n`;
+      }
+
+      // Closing
+      letter += `${closing}\n\n`;
+
+      // Sign off
+      letter += `${signoff}\n${fullName}`;
+
+      // Show preview
+      document.getElementById('ansokanPreview').textContent = letter;
+      document.getElementById('previewSection').style.display = 'block';
+      document.getElementById('previewSection').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+
+    function copyAnsökan() {
+      const text = document.getElementById('ansokanPreview').textContent;
+      navigator.clipboard.writeText(text).then(() => {
+        const feedback = document.getElementById('copyFeedback');
+        feedback.style.display = 'inline-flex';
+        setTimeout(() => { feedback.style.display = 'none'; }, 2000);
+      }).catch(() => {
+        // Fallback
+        const textarea = document.createElement('textarea');
+        textarea.value = text;
+        document.body.appendChild(textarea);
+        textarea.select();
+        document.execCommand('copy');
+        document.body.removeChild(textarea);
+        const feedback = document.getElementById('copyFeedback');
+        feedback.style.display = 'inline-flex';
+        setTimeout(() => { feedback.style.display = 'none'; }, 2000);
+      });
+    }
+
+    function resetForm() {
+      document.getElementById('ansokanForm').reset();
+      document.getElementById('previewSection').style.display = 'none';
+      currentStep = 1;
+      updateSteps();
+      document.getElementById('generateur').scrollIntoView({ behavior: 'smooth' });
+    }
+  </script>
+  <script src="/js/main.js"></script>
+</body>
+</html>

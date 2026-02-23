@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="canonical" href="https://www.vivre-en-suede.com/pages/villes/linkoping/" />
+  <meta name="description" content="Guide complet pour vivre à Linköping. Centre technologique suédois avec Saab et l'université, qualité de vie et coût abordable.">
+  <title>Vivre à Linköping - Guide complet pour expatriés | Vivre en Suède</title>
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="header-container">
+      <a href="/" class="header-logo">
+        <span class="header-logo-text">🇸🇪 Vivre en <span>Suède</span></span>
+      </a>
+      <nav class="main-nav">
+        <ul>
+          <li class="nav-mega-dropdown">
+            <a href="/pages/preparer-depart/">Guides pratiques</a>
+            <div class="nav-mega-menu">
+              <div class="nav-mega-column">
+                <span class="nav-mega-title">S'installer</span>
+                <a href="/pages/preparer-depart/">Préparer son départ</a>
+                <a href="/pages/preparer-depart/compte-bancaire/">Ouvrir un compte bancaire</a>
+                <a href="/pages/preparer-depart/personnummer/">Obtenir le Personnummer</a>
+                <a href="/pages/preparer-depart/logement/">Trouver un logement</a>
+                <a href="/pages/preparer-depart/demenagement/">Déménagement</a>
+                <a href="/pages/preparer-depart/travail/">Travailler en Suède</a>
+                <a href="/pages/preparer-depart/creation-entreprise/">Création d'entreprise</a>
+              </div>
+              <div class="nav-mega-column">
+                <span class="nav-mega-title">Vie quotidienne</span>
+                <a href="/pages/cout-vie/">Coût de la vie</a>
+                <a href="/pages/fiscalite/">Fiscalité</a>
+                <a href="/pages/sante/">Santé</a>
+                <a href="/pages/education/">Éducation</a>
+              </div>
+            </div>
+          </li>
+          <li class="nav-dropdown">
+            <a href="/pages/villes/" class="active">Villes</a>
+            <div class="nav-dropdown-menu">
+              <a href="/pages/villes/stockholm/">Stockholm</a>
+              <a href="/pages/villes/goteborg/">Göteborg</a>
+              <a href="/pages/villes/malmo/">Malmö</a>
+              <a href="/pages/villes/uppsala/">Uppsala</a>
+              <a href="/pages/villes/linkoping/">Linköping</a>
+              <a href="/pages/villes/">Toutes les villes →</a>
+            </div>
+          </li>
+          <li class="nav-dropdown">
+            <a href="/pages/outils/">Outils</a>
+            <div class="nav-dropdown-menu">
+              <a href="/pages/outils/convertisseur/">Convertisseur EUR/SEK</a>
+              <a href="/pages/outils/ansokan/">Générateur d'Ansökan</a>
+              <a href="/pages/outils/budget/">Simulateur de budget</a>
+              <a href="/pages/outils/quiz/">Quiz : Où vivre ?</a>
+            </div>
+          </li>
+            <li><a href="/pages/a-propos/">À propos</a></li>
+        </ul>
+      </nav>
+      <a href="/pages/outils/quiz/" class="btn btn-primary btn-sm header-cta">Quiz : Ma ville idéale</a>
+      <button class="mobile-menu-toggle" aria-label="Ouvrir le menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <button class="mobile-menu-close" aria-label="Fermer le menu">&times;</button>
+    <ul>
+      <li class="mobile-nav-group">
+        <button class="mobile-nav-toggle">Guides pratiques <span class="mobile-nav-arrow">›</span></button>
+        <ul class="mobile-nav-sub">
+          <li class="mobile-nav-subtitle">S'installer</li>
+          <li><a href="/pages/preparer-depart/">Préparer son départ</a></li>
+          <li><a href="/pages/preparer-depart/compte-bancaire/">Compte bancaire</a></li>
+          <li><a href="/pages/preparer-depart/personnummer/">Personnummer</a></li>
+          <li><a href="/pages/preparer-depart/logement/">Logement</a></li>
+          <li><a href="/pages/preparer-depart/demenagement/">Déménagement</a></li>
+          <li><a href="/pages/preparer-depart/travail/">Travail</a></li>
+          <li><a href="/pages/preparer-depart/creation-entreprise/">Création d'entreprise</a></li>
+          <li class="mobile-nav-subtitle">Vie quotidienne</li>
+          <li><a href="/pages/cout-vie/">Coût de la vie</a></li>
+          <li><a href="/pages/fiscalite/">Fiscalité</a></li>
+          <li><a href="/pages/sante/">Santé</a></li>
+          <li><a href="/pages/education/">Éducation</a></li>
+        </ul>
+      </li>
+      <li class="mobile-nav-group">
+        <button class="mobile-nav-toggle">Villes <span class="mobile-nav-arrow">›</span></button>
+        <ul class="mobile-nav-sub">
+          <li><a href="/pages/villes/stockholm/">Stockholm</a></li>
+          <li><a href="/pages/villes/goteborg/">Göteborg</a></li>
+          <li><a href="/pages/villes/malmo/">Malmö</a></li>
+          <li><a href="/pages/villes/uppsala/">Uppsala</a></li>
+          <li><a href="/pages/villes/linkoping/">Linköping</a></li>
+          <li><a href="/pages/villes/">Toutes les villes →</a></li>
+        </ul>
+      </li>
+      <li class="mobile-nav-group">
+        <button class="mobile-nav-toggle">Outils <span class="mobile-nav-arrow">›</span></button>
+        <ul class="mobile-nav-sub">
+          <li><a href="/pages/outils/convertisseur/">Convertisseur EUR/SEK</a></li>
+          <li><a href="/pages/outils/ansokan/">Générateur d'Ansökan</a></li>
+          <li><a href="/pages/outils/budget/">Simulateur de budget</a></li>
+          <li><a href="/pages/outils/quiz/">Quiz : Où vivre ?</a></li>
+        </ul>
+      </li>
+        <li><a href="/pages/a-propos/">À propos</a></li>
+      <li><a href="/pages/outils/quiz/">Quiz : Ma ville idéale</a></li>
+    </ul>
+  </div>
+
+  <!-- CITY HERO -->
+  <section class="city-header" style="background-image: url('/images/linkoping-hero.jpg');">
+    <div class="city-header-overlay"></div>
+    <div class="container">
+      <div class="city-header-content">
+        <nav class="breadcrumb" style="margin-bottom: var(--space-4);">
+          <a href="/" style="color: rgba(255,255,255,0.8);">Accueil</a>
+          <span class="breadcrumb-separator" style="color: rgba(255,255,255,0.5);">›</span>
+          <a href="/pages/villes/" style="color: rgba(255,255,255,0.8);">Villes</a>
+          <span class="breadcrumb-separator" style="color: rgba(255,255,255,0.5);">›</span>
+          <span style="color: white;">Linköping</span>
+        </nav>
+        <h1>Vivre à Linköping</h1>
+        <p style="color: rgba(255,255,255,0.9); font-size: var(--text-lg); margin-bottom: var(--space-6);">Le cœur technologique de la Suède</p>
+        <div class="city-stats">
+          <div class="city-stat">
+            <span class="city-stat-value">165 000</span>
+            <span class="city-stat-label">habitants</span>
+          </div>
+          <div class="city-stat">
+            <span class="city-stat-value">-3° / 22°C</span>
+            <span class="city-stat-label">temp. moy.</span>
+          </div>
+          <div class="city-stat">
+            <span class="city-stat-value">~2 200€</span>
+            <span class="city-stat-label">budget/mois</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTENT -->
+  <section class="section">
+    <div class="container">
+      <div class="page-layout page-layout-right">
+
+        <!-- MAIN CONTENT -->
+        <main class="article-content">
+
+          <!-- Author intro -->
+          <div class="article-author-intro">
+            <img src="/images/Ingrid-2026.png" alt="Ingrid" class="avatar avatar-lg">
+            <p>"Linköping est la silicon valley suédoise. Avec Saab, l'université et toutes les startups, c'est un paradis pour les ingénieurs."<br><span class="signature">— Ingrid</span></p>
+          </div>
+
+          <!-- Why this city -->
+          <section id="pourquoi">
+            <h2>Pourquoi Linköping ?</h2>
+            <p>Linköping est un centre technologique majeur, siège de Saab et d'une université de pointe. Ville à taille humaine avec un excellent rapport qualité-prix, elle attire de nombreux ingénieurs et chercheurs internationaux.</p>
+
+            <div class="pros-cons">
+              <div class="pros-list">
+                <h3>+ Avantages</h3>
+                <ul>
+                  <li>Hub tech et aéronautique (Saab)</li>
+                  <li>Université de technologie réputée (LiU)</li>
+                  <li>Coût de la vie raisonnable</li>
+                  <li>Ville à taille humaine et sûre</li>
+                  <li>Bonne qualité de vie pour les familles</li>
+                  <li>Proximité de la nature (lac, forêts)</li>
+                  <li>Marché de l'emploi tech dynamique</li>
+                </ul>
+              </div>
+              <div class="cons-list">
+                <h3>- Inconvénients</h3>
+                <ul>
+                  <li>Ville de taille moyenne, moins de choix culturels</li>
+                  <li>Peu de vols internationaux</li>
+                  <li>Communauté francophone réduite</li>
+                  <li>Hiver froid</li>
+                  <li>Vie nocturne limitée</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+
+          <!-- Neighborhoods -->
+          <section id="quartiers">
+            <h2>Où habiter à Linköping ?</h2>
+            <p>Voici les quartiers recommandés selon votre profil :</p>
+
+            <div class="city-map" data-city="linkoping">
+              <div class="city-map-placeholder">
+                [Carte interactive des quartiers de Linköping]
+              </div>
+            </div>
+
+            <div class="neighborhoods-grid">
+
+              <div class="neighborhood-card">
+                <div class="neighborhood-card-image" style="background-image: url('/images/linkoping-centrum.jpg');"></div>
+                <div class="neighborhood-card-body">
+                  <h4>Centrum/Innerstaden</h4>
+                  <p>Centre-ville avec commerces, restaurants et vie culturelle.</p>
+                  <div class="neighborhood-tags">
+                    <span class="badge badge-success">Central</span>
+                    <span class="badge badge-secondary">8 000-12 000 SEK</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="neighborhood-card">
+                <div class="neighborhood-card-image" style="background-image: url('/images/linkoping-ryd.jpg');"></div>
+                <div class="neighborhood-card-body">
+                  <h4>Ryd</h4>
+                  <p>Quartier étudiant près de l'université. Abordable et animé.</p>
+                  <div class="neighborhood-tags">
+                    <span class="badge badge-accent">Émergent</span>
+                    <span class="badge badge-secondary">5 500-8 000 SEK</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="neighborhood-card">
+                <div class="neighborhood-card-image" style="background-image: url('/images/linkoping-lambohov.jpg');"></div>
+                <div class="neighborhood-card-body">
+                  <h4>Lambohov</h4>
+                  <p>Résidentiel familial. Écoles, parcs, calme.</p>
+                  <div class="neighborhood-tags">
+                    <span class="badge badge-primary">Familial</span>
+                    <span class="badge badge-secondary">7 000-10 000 SEK</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="neighborhood-card">
+                <div class="neighborhood-card-image" style="background-image: url('/images/linkoping-hjulsbro.jpg');"></div>
+                <div class="neighborhood-card-body">
+                  <h4>Hjulsbro</h4>
+                  <p>En bord de lac. Maisons individuelles, nature à deux pas.</p>
+                  <div class="neighborhood-tags">
+                    <span class="badge badge-primary">Familial</span>
+                    <span class="badge badge-secondary">7 500-10 000 SEK</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="neighborhood-card">
+                <div class="neighborhood-card-image" style="background-image: url('/images/linkoping-tornby.jpg');"></div>
+                <div class="neighborhood-card-body">
+                  <h4>Tornby</h4>
+                  <p>Zone commerciale au nord. Logements neufs et abordables.</p>
+                  <div class="neighborhood-tags">
+                    <span class="badge badge-secondary">Business</span>
+                    <span class="badge badge-secondary">6 500-9 000 SEK</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="neighborhood-card">
+                <div class="neighborhood-card-image" style="background-image: url('/images/linkoping-ekholmen.jpg');"></div>
+                <div class="neighborhood-card-body">
+                  <h4>Ekholmen</h4>
+                  <p>Quartier résidentiel au sud, proche du lac Roxen.</p>
+                  <div class="neighborhood-tags">
+                    <span class="badge badge-primary">Familial</span>
+                    <span class="badge badge-secondary">6 000-8 500 SEK</span>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+            <div class="callout callout-conseil">
+              <div class="callout-title">💡 Mon quartier préféré</div>
+              <p class="callout-content">Pour les familles, Lambohov est parfait. Calme, proche de la nature et des écoles. Et le prix des loyers est imbattable comparé à Stockholm !</p>
+              <span class="signature">— Ingrid</span>
+            </div>
+          </section>
+
+          <!-- Cost of Living -->
+          <section id="cout-vie">
+            <h2>Coût de la vie à Linköping</h2>
+            <p>Voici un budget mensuel réaliste :</p>
+
+            <table class="price-table">
+              <thead>
+                <tr>
+                  <th>Dépense</th>
+                  <th>Célibataire</th>
+                  <th>Couple</th>
+                  <th>Famille (2 enfants)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Logement</td>
+                  <td>6 500 SEK</td>
+                  <td>9 000 SEK</td>
+                  <td>11 000 SEK</td>
+                </tr>
+                <tr>
+                  <td>Alimentation</td>
+                  <td>2 800 SEK</td>
+                  <td>4 200 SEK</td>
+                  <td>6 500 SEK</td>
+                </tr>
+                <tr>
+                  <td>Transport</td>
+                  <td>650 SEK</td>
+                  <td>1 300 SEK</td>
+                  <td>1 300 SEK</td>
+                </tr>
+                <tr>
+                  <td>Loisirs</td>
+                  <td>1 800 SEK</td>
+                  <td>2 500 SEK</td>
+                  <td>3 000 SEK</td>
+                </tr>
+                <tr>
+                  <td>Autres</td>
+                  <td>1 300 SEK</td>
+                  <td>1 800 SEK</td>
+                  <td>2 300 SEK</td>
+                </tr>
+                <tr style="background: var(--color-gray-lighter); font-weight: bold;">
+                  <td>TOTAL</td>
+                  <td>~13 000 SEK<br><small>(~1 200€)</small></td>
+                  <td>~18 800 SEK<br><small>(~1 700€)</small></td>
+                  <td>~24 000 SEK<br><small>(~2 200€)</small></td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+
+          <!-- Work -->
+          <section id="travail">
+            <h2>Travailler à Linköping</h2>
+            <p>Linköping est dominé par l'industrie aéronautique et la tech, avec Saab comme employeur principal.</p>
+
+            <h3>Secteurs qui recrutent</h3>
+            <ul>
+              <li><strong>Aéronautique & Défense :</strong> Saab (Gripen), sous-traitants</li>
+              <li><strong>Tech & IT :</strong> Startups, cybersécurité</li>
+              <li><strong>Recherche :</strong> Linköping University, RISE</li>
+              <li><strong>Santé :</strong> Hôpital universitaire</li>
+              <li><strong>Éducation :</strong> Université, écoles</li>
+            </ul>
+
+            <h3>Salaires moyens à Linköping</h3>
+            <table class="price-table">
+              <thead>
+                <tr>
+                  <th>Métier</th>
+                  <th>Salaire mensuel brut</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Ingénieur aéronautique</td>
+                  <td class="price">48 000 - 65 000 SEK</td>
+                </tr>
+                <tr>
+                  <td>Développeur</td>
+                  <td class="price">42 000 - 58 000 SEK</td>
+                </tr>
+                <tr>
+                  <td>Chercheur</td>
+                  <td class="price">40 000 - 55 000 SEK</td>
+                </tr>
+                <tr>
+                  <td>Infirmier</td>
+                  <td class="price">30 000 - 37 000 SEK</td>
+                </tr>
+                <tr>
+                  <td>Serveur</td>
+                  <td class="price">22 000 - 27 000 SEK</td>
+                </tr>
+              </tbody>
+            </table>
+
+            <div class="callout callout-info">
+              <div class="callout-title">📊 Sites d'emploi recommandés</div>
+              <p class="callout-content"><strong>Arbetsförmedlingen.se</strong>, <strong>LinkedIn</strong>, <strong>Saab Careers</strong>, <strong>LiU Karriär</strong></p>
+            </div>
+          </section>
+
+          <!-- Schools -->
+          <section id="ecoles">
+            <h2>Écoles et förskolor</h2>
+            <p>Linköping dispose d'un excellent système éducatif public. Les förskolor (crèches/maternelles) accueillent les enfants dès 1 an.</p>
+
+            <h3>Écoles internationales</h3>
+            <ul>
+              <li><strong>Internationella Engelska Skolan</strong> - Bilingue suédois/anglais</li>
+              <li><strong>Linköping International School</strong> - Programme international</li>
+            </ul>
+
+            <div class="callout callout-conseil">
+              <div class="callout-title">💡 Notre choix</div>
+              <p class="callout-content">Les écoles de Linköping sont excellentes et les classes petites. Les enfants s'intègrent rapidement grâce à l'ambiance familiale.</p>
+              <span class="signature">— Ingrid</span>
+            </div>
+          </section>
+
+          <!-- Things to do -->
+          <section id="activites">
+            <h2>Que faire à Linköping ?</h2>
+
+            <h3>Activités gratuites</h3>
+            <ul>
+              <li>Se promener au bord du lac Roxen</li>
+              <li>Visiter la cathédrale de Linköping</li>
+              <li>Explorer le musée en plein air Gamla Linköping</li>
+              <li>Faire du vélo sur le Kinda kanal</li>
+              <li>Randonner dans la réserve naturelle de Tinnerö</li>
+            </ul>
+
+            <h3>Culture et sorties</h3>
+            <ul>
+              <li>Flygvapenmuseum (musée de l'aviation)</li>
+              <li>Östergötlands museum</li>
+              <li>Konserthuset Linköping</li>
+              <li>Gamla Linköping (village historique reconstitué)</li>
+            </ul>
+
+            <h3>Communauté francophone</h3>
+            <ul>
+              <li>Communauté internationale de LiU</li>
+              <li>Meetups multilingues</li>
+              <li>Groupes d'expatriés Facebook</li>
+            </ul>
+          </section>
+
+          <!-- CTA -->
+          <div class="text-center py-12">
+            <p class="lead mb-6">Des questions sur Linköping ?</p>
+            <a href="/pages/outils/quiz/" class="btn btn-primary btn-lg btn-arrow">Trouver ma ville idéale</a>
+          </div>
+
+        </main>
+
+        <!-- RIGHT SIDEBAR -->
+        <aside class="page-sidebar-right">
+          <div class="sidebar-sticky">
+            <div class="toc">
+              <h3 class="toc-title">Sur cette page</h3>
+              <ul class="toc-list">
+                <li><a href="#pourquoi">Pourquoi Linköping ?</a></li>
+                <li><a href="#quartiers">Où habiter</a></li>
+                <li><a href="#cout-vie">Coût de la vie</a></li>
+                <li><a href="#travail">Travailler</a></li>
+                <li><a href="#ecoles">Écoles</a></li>
+                <li><a href="#activites">Que faire</a></li>
+              </ul>
+            </div>
+
+            <div class="card mt-6" style="padding: var(--space-5);">
+              <h4 style="margin-bottom: var(--space-3);">Autres villes</h4>
+              <ul style="list-style: none; padding: 0; margin: 0; font-size: var(--text-sm);">
+                <li style="margin-bottom: var(--space-2);"><a href="/pages/villes/stockholm/">Stockholm</a></li>
+                <li style="margin-bottom: var(--space-2);"><a href="/pages/villes/norrkoping/">Norrköping</a></li>
+                <li><a href="/pages/villes/jonkoping/">Jönköping</a></li>
+                <li><a href="/pages/villes/">Voir toutes →</a></li>
+              </ul>
+            </div>
+          </div>
+        </aside>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <span class="header-logo-text">🇸🇪 Vivre en <span>Suède</span></span>
+          <p>Le guide complet pour réussir votre expatriation.</p>
+        </div>
+        <div>
+          <h4 class="footer-title">Outils</h4>
+          <ul class="footer-links">
+            <li><a href="/pages/outils/convertisseur/">Convertisseur</a></li>
+            <li><a href="/pages/outils/budget/">Simulateur</a></li>
+            <li><a href="/pages/outils/quiz/">Quiz villes</a></li>
+            <li><a href="/pages/outils/ansokan/">Ansökan</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-title">Guides</h4>
+          <ul class="footer-links">
+            <li><a href="/pages/preparer-depart/">Préparer son départ</a></li>
+            <li><a href="/pages/cout-vie/">Coût de la vie</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-title">À propos</h4>
+          <ul class="footer-links">
+            <li><a href="/pages/outils/quiz/">Quiz : Ma ville idéale</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Vivre en Suède</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/main.js"></script>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  <script src="/js/city-maps.js"></script>
+</body>
+</html>

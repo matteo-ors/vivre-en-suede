@@ -1,0 +1,14 @@
+# Environment variables (API keys)
+.env
+
+# Node modules
+node_modules/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Generated script (not needed in production)
+generate-images.js
+package.json
+package-lock.json

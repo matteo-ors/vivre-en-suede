@@ -1,0 +1,15 @@
+# robots.txt - vivre-en-suede.com
+
+User-agent: *
+Allow: /
+
+# Bloquer les répertoires non pertinents pour le SEO
+Disallow: /node_modules/
+Disallow: /.env
+Disallow: /.git/
+Disallow: /generate-images.js
+Disallow: /package.json
+Disallow: /package-lock.json
+
+# Sitemap
+Sitemap: https://www.vivre-en-suede.com/sitemap.xml

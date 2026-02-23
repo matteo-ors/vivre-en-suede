@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="canonical" href="https://www.vivre-en-suede.com/pages/outils/budget/" />
+  <meta name="description" content="Simulateur de budget mensuel en Suède. Estimez vos dépenses par ville et situation familiale : logement, alimentation, transport et plus.">
+  <title>Simulateur de budget mensuel en Suède | Vivre en Suède</title>
+  <link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="header-container">
+      <a href="/" class="header-logo"><span class="header-logo-text">🇸🇪 Vivre en <span>Suède</span></span></a>
+      <nav class="main-nav">
+        <ul>
+          <li class="nav-mega-dropdown">
+            <a href="/pages/preparer-depart/">Guides pratiques</a>
+            <div class="nav-mega-menu">
+              <div class="nav-mega-column">
+                <span class="nav-mega-title">S'installer</span>
+                <a href="/pages/preparer-depart/">Préparer son départ</a>
+                <a href="/pages/preparer-depart/compte-bancaire/">Ouvrir un compte bancaire</a>
+                <a href="/pages/preparer-depart/personnummer/">Obtenir le Personnummer</a>
+                <a href="/pages/preparer-depart/logement/">Trouver un logement</a>
+                <a href="/pages/preparer-depart/demenagement/">Déménagement</a>
+                <a href="/pages/preparer-depart/travail/">Travailler en Suède</a>
+                <a href="/pages/preparer-depart/creation-entreprise/">Création d'entreprise</a>
+              </div>
+              <div class="nav-mega-column">
+                <span class="nav-mega-title">Vie quotidienne</span>
+                <a href="/pages/cout-vie/">Coût de la vie</a>
+                <a href="/pages/fiscalite/">Fiscalité</a>
+                <a href="/pages/sante/">Santé</a>
+                <a href="/pages/education/">Éducation</a>
+              </div>
+            </div>
+          </li>
+          <li class="nav-dropdown">
+            <a href="/pages/villes/">Villes</a>
+            <div class="nav-dropdown-menu">
+              <a href="/pages/villes/stockholm/">Stockholm</a>
+              <a href="/pages/villes/goteborg/">Göteborg</a>
+              <a href="/pages/villes/malmo/">Malmö</a>
+              <a href="/pages/villes/uppsala/">Uppsala</a>
+              <a href="/pages/villes/linkoping/">Linköping</a>
+              <a href="/pages/villes/">Toutes les villes →</a>
+            </div>
+          </li>
+          <li class="nav-dropdown">
+            <a href="/pages/outils/" class="active">Outils</a>
+            <div class="nav-dropdown-menu">
+              <a href="/pages/outils/convertisseur/">Convertisseur EUR/SEK</a>
+              <a href="/pages/outils/ansokan/">Générateur d'Ansökan</a>
+              <a href="/pages/outils/budget/">Simulateur de budget</a>
+              <a href="/pages/outils/quiz/">Quiz : Où vivre ?</a>
+            </div>
+          </li>
+            <li><a href="/pages/a-propos/">À propos</a></li>
+        </ul>
+      </nav>
+      <a href="/pages/outils/quiz/" class="btn btn-primary btn-sm header-cta">Quiz : Ma ville idéale</a>
+      <button class="mobile-menu-toggle" aria-label="Ouvrir le menu"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <button class="mobile-menu-close" aria-label="Fermer le menu">&times;</button>
+    <ul>
+      <li class="mobile-nav-group">
+        <button class="mobile-nav-toggle">Guides pratiques <span class="mobile-nav-arrow">›</span></button>
+        <ul class="mobile-nav-sub">
+          <li class="mobile-nav-subtitle">S'installer</li>
+          <li><a href="/pages/preparer-depart/">Préparer son départ</a></li>
+          <li><a href="/pages/preparer-depart/compte-bancaire/">Compte bancaire</a></li>
+          <li><a href="/pages/preparer-depart/personnummer/">Personnummer</a></li>
+          <li><a href="/pages/preparer-depart/logement/">Logement</a></li>
+          <li><a href="/pages/preparer-depart/demenagement/">Déménagement</a></li>
+          <li><a href="/pages/preparer-depart/travail/">Travail</a></li>
+          <li><a href="/pages/preparer-depart/creation-entreprise/">Création d'entreprise</a></li>
+          <li class="mobile-nav-subtitle">Vie quotidienne</li>
+          <li><a href="/pages/cout-vie/">Coût de la vie</a></li>
+          <li><a href="/pages/fiscalite/">Fiscalité</a></li>
+          <li><a href="/pages/sante/">Santé</a></li>
+          <li><a href="/pages/education/">Éducation</a></li>
+        </ul>
+      </li>
+      <li class="mobile-nav-group">
+        <button class="mobile-nav-toggle">Villes <span class="mobile-nav-arrow">›</span></button>
+        <ul class="mobile-nav-sub">
+          <li><a href="/pages/villes/stockholm/">Stockholm</a></li>
+          <li><a href="/pages/villes/goteborg/">Göteborg</a></li>
+          <li><a href="/pages/villes/malmo/">Malmö</a></li>
+          <li><a href="/pages/villes/uppsala/">Uppsala</a></li>
+          <li><a href="/pages/villes/linkoping/">Linköping</a></li>
+          <li><a href="/pages/villes/">Toutes les villes →</a></li>
+        </ul>
+      </li>
+      <li class="mobile-nav-group">
+        <button class="mobile-nav-toggle">Outils <span class="mobile-nav-arrow">›</span></button>
+        <ul class="mobile-nav-sub">
+          <li><a href="/pages/outils/convertisseur/">Convertisseur EUR/SEK</a></li>
+          <li><a href="/pages/outils/ansokan/">Générateur d'Ansökan</a></li>
+          <li><a href="/pages/outils/budget/">Simulateur de budget</a></li>
+          <li><a href="/pages/outils/quiz/">Quiz : Où vivre ?</a></li>
+        </ul>
+      </li>
+        <li><a href="/pages/a-propos/">À propos</a></li>
+      <li><a href="/pages/outils/quiz/">Quiz : Ma ville idéale</a></li>
+    </ul>
+  </div>
+
+  <!-- HERO -->
+  <section class="hero-mini">
+    <div class="container">
+      <div class="hero-content">
+        <nav class="breadcrumb">
+          <a href="/">Accueil</a>
+          <span class="breadcrumb-separator">&rsaquo;</span>
+          <a href="/pages/outils/">Simulateurs gratuits</a>
+          <span class="breadcrumb-separator">&rsaquo;</span>
+          <span class="breadcrumb-current">Simulateur de budget</span>
+        </nav>
+        <h1 class="hero-title">Simulateur de budget mensuel</h1>
+        <p class="hero-subtitle">Estimez vos dépenses mensuelles en Suède selon votre ville et votre situation familiale</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- BUDGET SIMULATOR -->
+  <section class="section">
+    <div class="container">
+      <div class="simulator-container" id="budgetSimulator">
+
+        <div class="grid grid-2" style="gap: 1.5rem; margin-bottom: 2rem;">
+          <div>
+            <label for="budgetCity" style="display:block; font-weight:600; margin-bottom:0.5rem;">Ville</label>
+            <select id="budgetCity" style="width:100%; padding:0.75rem 1rem; font-size:1rem; border:1px solid #d1d5db; border-radius:8px; background:#fff;">
+              <option value="stockholm">Stockholm</option>
+              <option value="goteborg">Göteborg</option>
+              <option value="malmo">Malmö</option>
+              <option value="uppsala">Uppsala</option>
+              <option value="umea">Umeå</option>
+            </select>
+          </div>
+          <div>
+            <label for="budgetFamily" style="display:block; font-weight:600; margin-bottom:0.5rem;">Situation familiale</label>
+            <select id="budgetFamily" style="width:100%; padding:0.75rem 1rem; font-size:1rem; border:1px solid #d1d5db; border-radius:8px; background:#fff;">
+              <option value="celibataire">Célibataire</option>
+              <option value="couple">Couple</option>
+              <option value="famille">Famille avec enfants</option>
+            </select>
+          </div>
+        </div>
+
+        <button id="budgetCalculate" class="btn btn-primary" style="width:100%; padding:0.9rem; font-size:1.05rem; margin-bottom:2rem;">Calculer mon budget</button>
+
+        <!-- RESULT -->
+        <div id="budgetResult" style="display:none;">
+
+          <h2 style="text-align:center; margin-bottom:0.25rem;" id="resultTitle">Budget mensuel estimé</h2>
+          <p style="text-align:center; color:#6b7280; margin-bottom:1.5rem;" id="resultSubtitle"></p>
+
+          <div style="overflow-x:auto;">
+            <table class="price-table" id="budgetTable">
+              <thead>
+                <tr>
+                  <th>Poste de dépense</th>
+                  <th>Montant (SEK)</th>
+                  <th>Montant (EUR)</th>
+                </tr>
+              </thead>
+              <tbody id="budgetTableBody">
+              </tbody>
+              <tfoot>
+                <tr style="font-weight:700; font-size:1.1rem;">
+                  <td>Total mensuel</td>
+                  <td id="totalSek"></td>
+                  <td id="totalEur"></td>
+                </tr>
+              </tfoot>
+            </table>
+          </div>
+
+          <div class="callout callout-info mt-8" id="budgetTip" style="display:none;">
+            <div class="callout-title">Astuce</div>
+            <p class="callout-content" id="budgetTipText"></p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section class="section section-alt">
+    <div class="container container-md">
+      <h2 class="text-center mb-8">Comment sont calculées ces estimations ?</h2>
+
+      <p>Nos estimations se basent sur les prix moyens constatés en Suède, actualisés au premier trimestre 2025. Voici notre approche :</p>
+
+      <ul>
+        <li><strong>Logement :</strong> Prix moyen d'un appartement dans le centre ou en proche périphérie, adapté au type de foyer (studio, T2, T3+).</li>
+        <li><strong>Alimentation :</strong> Budget courses en supermarché (ICA, Coop, Willys, Lidl) avec quelques sorties au restaurant.</li>
+        <li><strong>Transport :</strong> Abonnement mensuel aux transports en commun (SL, Västtrafik, Skånetrafiken, etc.).</li>
+        <li><strong>Loisirs :</strong> Sorties, abonnements streaming, activités sportives et culturelles.</li>
+        <li><strong>Téléphone / Internet :</strong> Forfait mobile et abonnement internet fibre.</li>
+        <li><strong>Assurance :</strong> Assurance habitation (hemförsäkring) et complémentaire santé.</li>
+        <li><strong>Divers :</strong> Vêtements, hygiène, imprévus.</li>
+      </ul>
+
+      <p class="mt-6">Les <strong>multiplicateurs par ville</strong> reflètent les écarts de prix constatés par rapport à Stockholm, la ville la plus chère. Par exemple, Uppsala est environ 18% moins cher qu'Stockholm pour un budget global.</p>
+
+      <div class="callout callout-info mt-6">
+        <div class="callout-title">Taux de change utilisé</div>
+        <p class="callout-content">Les montants en euros sont calculés au taux indicatif de 1 EUR = 11,50 SEK. Ce taux peut varier. Consultez notre <a href="/pages/outils/convertisseur/">convertisseur EUR/SEK</a> pour le taux du jour.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- INGRID CALLOUT -->
+  <section class="section">
+    <div class="container container-md">
+      <div class="callout callout-conseil">
+        <div class="callout-title">Conseil d'Ingrid</div>
+        <p class="callout-content">En arrivant en Suède, prévoyez toujours un budget 10 à 15% supérieur à votre estimation. Les premiers mois coûtent plus cher : dépôt de garantie du logement (souvent 3 mois de loyer), achat de meubles, équipement d'hiver... Ensuite, une fois installé, vous trouverez vos astuces pour économiser. Mes préférées : l'application Too Good To Go pour la nourriture, les loppmarknader (marchés aux puces) pour les meubles, et le bus plutôt que le taxi !</p>
+        <span class="signature">— Ingrid</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- RELATED TOOLS -->
+  <section class="section section-alt">
+    <div class="container">
+      <h2 class="text-center mb-8">Autres outils utiles</h2>
+      <div class="grid grid-3">
+        <a href="/pages/outils/convertisseur/" class="tool-card">
+          <div class="tool-icon">💱</div>
+          <h3>Convertisseur EUR/SEK</h3>
+          <p>Convertissez vos euros en couronnes suédoises au taux du jour</p>
+        </a>
+        <a href="/pages/outils/ansokan/" class="tool-card">
+          <div class="tool-icon">📝</div>
+          <h3>Générateur d'Ansökan</h3>
+          <p>Créez votre lettre de motivation suédoise en quelques clics</p>
+        </a>
+        <a href="/pages/outils/quiz/" class="tool-card">
+          <div class="tool-icon">🎯</div>
+          <h3>Quiz : Où vivre ?</h3>
+          <p>Trouvez la ville suédoise qui vous correspond le mieux</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <span class="header-logo-text">🇸🇪 Vivre en <span>Suède</span></span>
+          <p>Le guide complet pour réussir votre expatriation.</p>
+        </div>
+        <div>
+          <h4 class="footer-title">Guides</h4>
+          <ul class="footer-links">
+            <li><a href="/pages/cout-vie/">Coût de la vie</a></li>
+            <li><a href="/pages/fiscalite/">Fiscalité</a></li>
+            <li><a href="/pages/sante/">Santé</a></li>
+            <li><a href="/pages/villes/">Villes</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-title">Simulateurs</h4>
+          <ul class="footer-links">
+            <li><a href="/pages/outils/convertisseur/">Convertisseur EUR/SEK</a></li>
+            <li><a href="/pages/outils/ansokan/">Générateur Ansökan</a></li>
+            <li><a href="/pages/outils/budget/">Simulateur budget</a></li>
+            <li><a href="/pages/outils/quiz/">Quiz villes</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-title">À propos</h4>
+          <ul class="footer-links">
+            <li><a href="/pages/a-propos/">Qui suis-je ?</a></li>
+            <li><a href="/pages/mentions-legales/">Mentions légales</a></li>
+            <li><a href="/pages/confidentialite/">Confidentialité</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Vivre en Suède. Tous droits réservés.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- BUDGET SIMULATOR SCRIPT -->
+  <script>
+  (function() {
+    var RATE = 11.5;
+
+    var baseCosts = {
+      logement:     12000,
+      alimentation:  4500,
+      transport:      970,
+      loisirs:       2000,
+      telecom:        500,
+      assurance:      400,
+      divers:        1500
+    };
+
+    var labels = {
+      logement:     'Logement (loyer + charges)',
+      alimentation: 'Alimentation',
+      transport:    'Transport',
+      loisirs:      'Loisirs et sorties',
+      telecom:      'Téléphone / Internet',
+      assurance:    'Assurance',
+      divers:       'Divers'
+    };
+
+    var cityMultipliers = {
+      stockholm:  1.00,
+      goteborg:   0.92,
+      malmo:      0.88,
+      uppsala:    0.82,
+      umea:       0.78
+    };
+
+    var cityNames = {
+      stockholm: 'Stockholm',
+      goteborg:  'Göteborg',
+      malmo:     'Malmö',
+      uppsala:   'Uppsala',
+      umea:      'Umeå'
+    };
+
+    var familyMultipliers = {
+      celibataire: {
+        logement: 1.0, alimentation: 1.0, transport: 1.0,
+        loisirs: 1.0, telecom: 1.0, assurance: 1.0, divers: 1.0
+      },
+      couple: {
+        logement: 1.45, alimentation: 1.8, transport: 2.0,
+        loisirs: 1.6, telecom: 1.5, assurance: 1.6, divers: 1.5
+      },
+      famille: {
+        logement: 2.0, alimentation: 2.8, transport: 2.5,
+        loisirs: 2.2, telecom: 1.6, assurance: 2.0, divers: 2.2
+      }
+    };
+
+    var familyLabels = {
+      celibataire: 'Célibataire',
+      couple: 'Couple',
+      famille: 'Famille avec enfants'
+    };
+
+    var tips = {
+      stockholm: 'Stockholm est la capitale et la ville la plus chère de Suède, mais aussi celle qui offre le plus d\'opportunités professionnelles et une vie culturelle vibrante. Pensez aux quartiers de Södermalm ou Hagastaden pour un bon rapport qualité-prix.',
+      goteborg: 'Göteborg est la deuxième ville du pays, sur la côte ouest. Sa culture maritime, ses fruits de mer renommés et son ambiance détendue en font un choix de vie très agréable.',
+      uppsala: 'Uppsala est une ville universitaire historique à seulement 40 minutes de Stockholm. La vie étudiante y est riche et le coût de la vie sensiblement plus abordable que dans la capitale.',
+      malmo: 'Malmö est la troisième ville de Suède, située tout près de Copenhague via le pont de l\'Öresund. C\'est une ville multiculturelle et dynamique avec un coût de la vie modéré.',
+      umea: 'Umeå, dans le nord de la Suède, est une ville universitaire dynamique. Prévoyez un budget vêtements d\'hiver plus conséquent, mais profitez des aurores boréales et du soleil de minuit !'
+    };
+
+    function fmt(value) {
+      return Math.round(value).toLocaleString('fr-FR');
+    }
+
+    function calculate() {
+      var city = document.getElementById('budgetCity').value;
+      var family = document.getElementById('budgetFamily').value;
+      var cityMult = cityMultipliers[city];
+      var famMult = familyMultipliers[family];
+
+      var rows = [];
+      var total = 0;
+      var keys = ['logement','alimentation','transport','loisirs','telecom','assurance','divers'];
+
+      for (var i = 0; i < keys.length; i++) {
+        var key = keys[i];
+        var amount = Math.round(baseCosts[key] * cityMult * famMult[key]);
+        total += amount;
+        rows.push({ label: labels[key], sek: amount, eur: amount / RATE });
+      }
+
+      // Build table
+      var tbody = document.getElementById('budgetTableBody');
+      tbody.innerHTML = '';
+      for (var j = 0; j < rows.length; j++) {
+        var tr = document.createElement('tr');
+        var tdLabel = document.createElement('td');
+        tdLabel.textContent = rows[j].label;
+        var tdSek = document.createElement('td');
+        tdSek.className = 'price';
+        tdSek.textContent = fmt(rows[j].sek) + ' SEK';
+        var tdEur = document.createElement('td');
+        tdEur.textContent = fmt(rows[j].eur) + ' €';
+        tr.appendChild(tdLabel);
+        tr.appendChild(tdSek);
+        tr.appendChild(tdEur);
+        tbody.appendChild(tr);
+      }
+
+      document.getElementById('totalSek').textContent = fmt(total) + ' SEK';
+      document.getElementById('totalEur').textContent = fmt(total / RATE) + ' €';
+      document.getElementById('resultSubtitle').textContent = familyLabels[family] + ' à ' + cityNames[city];
+
+      // Show tip
+      var tipEl = document.getElementById('budgetTip');
+      var tipText = document.getElementById('budgetTipText');
+      tipText.textContent = tips[city];
+      tipEl.style.display = 'block';
+
+      // Show result
+      var resultEl = document.getElementById('budgetResult');
+      resultEl.style.display = 'block';
+      resultEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+
+    document.getElementById('budgetCalculate').addEventListener('click', calculate);
+
+    document.getElementById('budgetCity').addEventListener('change', function() {
+      if (document.getElementById('budgetResult').style.display !== 'none') {
+        calculate();
+      }
+    });
+    document.getElementById('budgetFamily').addEventListener('change', function() {
+      if (document.getElementById('budgetResult').style.display !== 'none') {
+        calculate();
+      }
+    });
+  })();
+  </script>
+
+  <script src="/js/main.js"></script>
+</body>
+</html>

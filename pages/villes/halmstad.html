@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="canonical" href="https://www.vivre-en-suede.com/pages/villes/halmstad/" />
+  <meta name="description" content="Guide complet pour vivre à Halmstad en Suède. Station balnéaire de la côte ouest, plages de Tylösand, surf et qualité de vie au bord de la mer. Quartiers, budget et conseils.">
+  <title>Vivre à Halmstad - La perle de la côte ouest | Vivre en Suède</title>
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="header-container">
+      <a href="/" class="header-logo"><span class="header-logo-text">🇸🇪 Vivre en <span>Suède</span></span></a>
+      <nav class="main-nav">
+        <ul>
+          <li class="nav-mega-dropdown">
+            <a href="/pages/preparer-depart/">Guides pratiques</a>
+            <div class="nav-mega-menu">
+              <div class="nav-mega-column">
+                <span class="nav-mega-title">S'installer</span>
+                <a href="/pages/preparer-depart/">Préparer son départ</a>
+                <a href="/pages/preparer-depart/compte-bancaire/">Ouvrir un compte bancaire</a>
+                <a href="/pages/preparer-depart/personnummer/">Obtenir le Personnummer</a>
+                <a href="/pages/preparer-depart/logement/">Trouver un logement</a>
+                <a href="/pages/preparer-depart/demenagement/">Déménagement</a>
+                <a href="/pages/preparer-depart/travail/">Travailler en Suède</a>
+                <a href="/pages/preparer-depart/creation-entreprise/">Création d'entreprise</a>
+              </div>
+              <div class="nav-mega-column">
+                <span class="nav-mega-title">Vie quotidienne</span>
+                <a href="/pages/cout-vie/">Coût de la vie</a>
+                <a href="/pages/fiscalite/">Fiscalité</a>
+                <a href="/pages/sante/">Santé</a>
+                <a href="/pages/education/">Éducation</a>
+              </div>
+            </div>
+          </li>
+          <li class="nav-dropdown">
+            <a href="/pages/villes/" class="active">Villes</a>
+            <div class="nav-dropdown-menu">
+              <a href="/pages/villes/stockholm/">Stockholm</a>
+              <a href="/pages/villes/goteborg/">Göteborg</a>
+              <a href="/pages/villes/malmo/">Malmö</a>
+              <a href="/pages/villes/uppsala/">Uppsala</a>
+              <a href="/pages/villes/linkoping/">Linköping</a>
+              <a href="/pages/villes/">Toutes les villes →</a>
+            </div>
+          </li>
+          <li class="nav-dropdown">
+            <a href="/pages/outils/">Outils</a>
+            <div class="nav-dropdown-menu">
+              <a href="/pages/outils/convertisseur/">Convertisseur EUR/SEK</a>
+              <a href="/pages/outils/ansokan/">Générateur d'Ansökan</a>
+              <a href="/pages/outils/budget/">Simulateur de budget</a>
+              <a href="/pages/outils/quiz/">Quiz : Où vivre ?</a>
+            </div>
+          </li>
+          <li><a href="/pages/a-propos/">À propos</a></li>
+        </ul>
+      </nav>
+      <a href="/pages/outils/quiz/" class="btn btn-primary btn-sm header-cta">Quiz : Ma ville idéale</a>
+      <button class="mobile-menu-toggle" aria-label="Ouvrir le menu"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <button class="mobile-menu-close" aria-label="Fermer le menu">&times;</button>
+    <ul>
+      <li class="mobile-nav-group">
+        <button class="mobile-nav-toggle">Guides pratiques <span class="mobile-nav-arrow">›</span></button>
+        <ul class="mobile-nav-sub">
+          <li class="mobile-nav-subtitle">S'installer</li>
+          <li><a href="/pages/preparer-depart/">Préparer son départ</a></li>
+          <li><a href="/pages/preparer-depart/compte-bancaire/">Compte bancaire</a></li>
+          <li><a href="/pages/preparer-depart/personnummer/">Personnummer</a></li>
+          <li><a href="/pages/preparer-depart/logement/">Logement</a></li>
+          <li><a href="/pages/preparer-depart/demenagement/">Déménagement</a></li>
+          <li><a href="/pages/preparer-depart/travail/">Travail</a></li>
+          <li><a href="/pages/preparer-depart/creation-entreprise/">Création d'entreprise</a></li>
+          <li class="mobile-nav-subtitle">Vie quotidienne</li>
+          <li><a href="/pages/cout-vie/">Coût de la vie</a></li>
+          <li><a href="/pages/fiscalite/">Fiscalité</a></li>
+          <li><a href="/pages/sante/">Santé</a></li>
+          <li><a href="/pages/education/">Éducation</a></li>
+        </ul>
+      </li>
+      <li class="mobile-nav-group">
+        <button class="mobile-nav-toggle">Villes <span class="mobile-nav-arrow">›</span></button>
+        <ul class="mobile-nav-sub">
+          <li><a href="/pages/villes/stockholm/">Stockholm</a></li>
+          <li><a href="/pages/villes/goteborg/">Göteborg</a></li>
+          <li><a href="/pages/villes/malmo/">Malmö</a></li>
+          <li><a href="/pages/villes/uppsala/">Uppsala</a></li>
+          <li><a href="/pages/villes/linkoping/">Linköping</a></li>
+          <li><a href="/pages/villes/">Toutes les villes →</a></li>
+        </ul>
+      </li>
+      <li class="mobile-nav-group">
+        <button class="mobile-nav-toggle">Outils <span class="mobile-nav-arrow">›</span></button>
+        <ul class="mobile-nav-sub">
+          <li><a href="/pages/outils/convertisseur/">Convertisseur EUR/SEK</a></li>
+          <li><a href="/pages/outils/ansokan/">Générateur d'Ansökan</a></li>
+          <li><a href="/pages/outils/budget/">Simulateur de budget</a></li>
+          <li><a href="/pages/outils/quiz/">Quiz : Où vivre ?</a></li>
+        </ul>
+      </li>
+      <li><a href="/pages/a-propos/">À propos</a></li>
+      <li><a href="/pages/outils/quiz/">Quiz : Ma ville idéale</a></li>
+    </ul>
+  </div>
+
+  <!-- HERO -->
+  <section class="hero-mini">
+    <div class="container">
+      <div class="hero-content">
+        <nav class="breadcrumb">
+          <a href="/">Accueil</a>
+          <span class="breadcrumb-separator">&rsaquo;</span>
+          <a href="/pages/villes/">Villes</a>
+          <span class="breadcrumb-separator">&rsaquo;</span>
+          <span class="breadcrumb-current">Halmstad</span>
+        </nav>
+        <h1 class="hero-title">Vivre à Halmstad</h1>
+        <p class="hero-subtitle">Station balnéaire prisée de la côte ouest, Halmstad séduit par ses plages de sable, sa culture du surf et une qualité de vie décontractée entre mer et campagne du Halland.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- KEY STATS -->
+  <section class="section">
+    <div class="container">
+      <div class="grid grid-4">
+        <div class="card" style="padding: var(--space-6); text-align: center;">
+          <div style="font-size: var(--text-3xl); margin-bottom: var(--space-2);">👥</div>
+          <div style="font-size: var(--text-2xl); font-weight: var(--font-bold); color: var(--color-primary);">105 000</div>
+          <div style="color: var(--color-text-secondary); font-size: var(--text-sm);">Habitants</div>
+        </div>
+        <div class="card" style="padding: var(--space-6); text-align: center;">
+          <div style="font-size: var(--text-3xl); margin-bottom: var(--space-2);">🌡️</div>
+          <div style="font-size: var(--text-2xl); font-weight: var(--font-bold); color: var(--color-primary);">-1° / 20°C</div>
+          <div style="color: var(--color-text-secondary); font-size: var(--text-sm);">Hiver / Été</div>
+        </div>
+        <div class="card" style="padding: var(--space-6); text-align: center;">
+          <div style="font-size: var(--text-3xl); margin-bottom: var(--space-2);">💰</div>
+          <div style="font-size: var(--text-2xl); font-weight: var(--font-bold); color: var(--color-primary);">~9 000 SEK</div>
+          <div style="color: var(--color-text-secondary); font-size: var(--text-sm);">Loyer moyen (2 pièces)</div>
+        </div>
+        <div class="card" style="padding: var(--space-6); text-align: center;">
+          <div style="font-size: var(--text-3xl); margin-bottom: var(--space-2);">🏖️</div>
+          <div style="font-size: var(--text-2xl); font-weight: var(--font-bold); color: var(--color-primary);">Halland</div>
+          <div style="color: var(--color-text-secondary); font-size: var(--text-sm);">Région (län)</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MAIN CONTENT WITH SIDEBAR -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="page-layout-right">
+
+        <div class="page-content">
+
+          <div class="card" style="padding: var(--space-8); margin-bottom: var(--space-8);">
+            <h2 style="margin-bottom: var(--space-4);">Pourquoi choisir Halmstad ?</h2>
+            <p>Halmstad est la ville principale du Halland, une région côtière réputée pour ses plages de sable fin et son ensoleillement généreux. Située entre Göteborg (1h30 au nord) et Malmö (1h30 au sud), Halmstad bénéficie d'une position stratégique sur la côte ouest suédoise.</p>
+            <p>La plage de Tylösand, à quelques kilomètres du centre, est considérée comme l'une des plus belles de Scandinavie. En été, elle attire des visiteurs de toute la Suède pour le surf, le beach-volley et les festivals de musique. Le Halmstad Golf Club, créé en 1930, a accueilli la Solheim Cup et jouit d'une renommée internationale.</p>
+            <p>Malgré sa réputation de station balnéaire, Halmstad est une ville dynamique toute l'année. Högskolan i Halmstad (l'université de Halmstad) forme environ 10 000 étudiants et est reconnue pour ses programmes en innovation et en entrepreneuriat. La rivière Nissan traverse le centre-ville et ajoute au charme de la promenade urbaine.</p>
+          </div>
+
+          <!-- MAP -->
+          <div class="card" style="padding: var(--space-8); margin-bottom: var(--space-8);">
+            <h2 style="margin-bottom: var(--space-4);">Carte de Halmstad</h2>
+            <div id="map" style="height: 400px; border-radius: var(--radius-md); z-index: 1;"></div>
+          </div>
+
+          <!-- QUARTIERS -->
+          <div class="card" style="padding: var(--space-8); margin-bottom: var(--space-8);">
+            <h2 style="margin-bottom: var(--space-6);">Les quartiers de Halmstad</h2>
+
+            <h3 style="margin-bottom: var(--space-2);">Centrum</h3>
+            <p>Le coeur historique de Halmstad s'organise autour de la Stora Torg (Grande Place) et du château de Halmstad. On y trouve les boutiques, les restaurants et la promenade le long de la Nissan. Les loyers sont plus élevés mais le cadre de vie est agréable et tout est accessible à pied.</p>
+
+            <h3 style="margin-bottom: var(--space-2);">Frösakull</h3>
+            <p>Quartier résidentiel au nord-ouest, entre la ville et la mer. Frösakull offre un cadre verdoyant avec des villas et des maisons individuelles. La proximité de la plage en fait un lieu de vie prisé des familles et des amateurs de nature.</p>
+
+            <h3 style="margin-bottom: var(--space-2);">Tylösand</h3>
+            <p>Célèbre pour sa plage emblématique, Tylösand est le quartier le plus recherché en été. On y trouve le prestigieux hôtel Tylösand et le golf. Les logements sont plus chers, mais vivre ici, c'est profiter de la mer au quotidien. En hiver, le quartier retrouve une tranquillité appréciable.</p>
+
+            <h3 style="margin-bottom: var(--space-2);">Andersberg</h3>
+            <p>Quartier multiculturel situé au sud du centre-ville. Andersberg offre les loyers les plus accessibles de Halmstad avec un bon réseau de transports. Le quartier est en cours de rénovation urbaine et dispose de commerces de proximité et d'écoles.</p>
+
+            <h3 style="margin-bottom: var(--space-2);">Vallås</h3>
+            <p>Quartier résidentiel familial à l'est du centre, Vallås combine des maisons individuelles et des immeubles d'appartements. Les familles apprécient ses écoles, ses espaces verts et son calme, tout en restant à proximité du centre-ville.</p>
+
+            <h3 style="margin-bottom: var(--space-2);">Oskarström</h3>
+            <p>Petite localité au nord-est de Halmstad, Oskarström offre un cadre de vie semi-rural avec des loyers très abordables. Le bourg possède ses propres commerces et écoles. C'est un choix idéal pour ceux qui recherchent la tranquillité de la campagne hallandaise tout en restant connectés à la ville.</p>
+          </div>
+
+          <!-- BUDGET -->
+          <div class="card" style="padding: var(--space-8); margin-bottom: var(--space-8);">
+            <h2 style="margin-bottom: var(--space-6);">Budget mensuel estimé</h2>
+            <div style="overflow-x: auto;">
+              <table class="price-table">
+                <thead>
+                  <tr>
+                    <th>Poste de dépense</th>
+                    <th>Coût estimé (SEK)</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr><td>Loyer (2 pièces, centre)</td><td>8 000 - 10 000</td></tr>
+                  <tr><td>Alimentation</td><td>3 000 - 4 000</td></tr>
+                  <tr><td>Transports (carte mensuelle Hallandstrafiken)</td><td>700</td></tr>
+                  <tr><td>Internet + mobile</td><td>500 - 700</td></tr>
+                  <tr><td>Électricité</td><td>400 - 900</td></tr>
+                  <tr><td>Loisirs / sorties</td><td>1 500 - 2 500</td></tr>
+                  <tr><td><strong>Total estimé</strong></td><td><strong>14 100 - 18 800</strong></td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- EMPLOI -->
+          <div class="card" style="padding: var(--space-8); margin-bottom: var(--space-8);">
+            <h2 style="margin-bottom: var(--space-4);">Emploi et économie</h2>
+            <p>Halmstad possède une économie diversifiée. Le secteur public (Region Halland, commune de Halmstad) est le plus gros employeur. Högskolan i Halmstad, spécialisée dans l'innovation et le numérique, contribue à l'émergence de startups locales.</p>
+            <p>Le tourisme et l'hôtellerie sont des secteurs importants, particulièrement en été. L'industrie agroalimentaire, la logistique et le commerce profitent de la position de Halmstad sur l'axe Göteborg-Malmö. Le port de Halmstad est un hub régional pour le commerce maritime.</p>
+            <p>Pour les expatriés, les secteurs de la santé, du tourisme et de l'enseignement offrent des opportunités régulières. La proximité de Göteborg permet également de trouver un emploi dans la métropole tout en vivant à Halmstad, le trajet en train durant environ 1h30.</p>
+          </div>
+
+          <!-- TRANSPORTS -->
+          <div class="card" style="padding: var(--space-8); margin-bottom: var(--space-8);">
+            <h2 style="margin-bottom: var(--space-4);">Se déplacer à Halmstad</h2>
+            <p>Halmstad est une ville agréable à parcourir à vélo, avec un réseau de pistes cyclables qui s'étend le long de la côte et vers les quartiers résidentiels. Hallandstrafiken gère les bus urbains et régionaux avec une bonne couverture de la commune.</p>
+            <p>La gare centrale de Halmstad se trouve sur la ligne de la côte ouest (Västkustbanan), reliant Göteborg (1h30) et Malmö (1h30) avec des trains réguliers. Stockholm est accessible en environ 4h en train. L'aéroport de Halmstad City (HAD) propose des liaisons vers Stockholm-Bromma. Le vélo reste le moyen de transport privilégié des habitants pour les trajets quotidiens.</p>
+          </div>
+
+          <!-- LIFESTYLE -->
+          <div class="card" style="padding: var(--space-8); margin-bottom: var(--space-8);">
+            <h2 style="margin-bottom: var(--space-4);">Vie quotidienne et loisirs</h2>
+            <p>La vie à Halmstad est rythmée par les saisons. En été, la ville s'anime autour de ses plages : surf, paddle, kayak et baignade sont au programme quotidien. Le festival de Tylösand et les marchés d'été attirent des visiteurs de toute la Suède. Le golf est une institution locale avec plusieurs parcours de qualité internationale.</p>
+            <p>En hiver, la côte du Halland offre des promenades spectaculaires face à la mer. Les restaurants et cafés du centre-ville restent animés. Le Mjellby Konstmuseum expose des oeuvres du groupe de Halmstad, un mouvement surréaliste suédois important. La Norre Katts Park, en plein centre, est un lieu de détente apprécié toute l'année.</p>
+            <p>La communauté internationale est présente grâce à l'université. Les groupes d'expatriés organisent des rencontres régulières. La Hallandsleden, un sentier de randonnée qui traverse la région, permet de découvrir la campagne hallandaise vallonnée et ses fermes traditionnelles.</p>
+          </div>
+
+          <!-- INGRID'S ADVICE -->
+          <div class="callout callout-conseil">
+            <div class="callout-title">Mon avis sur Halmstad</div>
+            <p class="callout-content">
+              Halmstad est la ville idéale si vous aimez la mer et un rythme de vie décontracté. La côte du Halland est magnifique et les plages de Tylösand n'ont rien à envier aux destinations méditerranéennes en été. La ville est suffisamment grande pour offrir tous les services nécessaires tout en gardant une atmosphère de petite ville. Le climat de la côte ouest est le plus doux de Suède, ce qui rend les hivers plus supportables qu'ailleurs. Si vous cherchez le soleil et la mer sans quitter la Suède, Halmstad est un choix parfait.
+            </p>
+            <span class="signature">— Ingrid</span>
+          </div>
+
+        </div>
+
+        <!-- SIDEBAR -->
+        <aside class="page-sidebar-right">
+          <div class="sidebar-sticky">
+
+            <div class="card" style="padding: var(--space-6); margin-bottom: var(--space-6);">
+              <h3 style="margin-bottom: var(--space-4); font-size: var(--text-lg);">Autres villes</h3>
+              <ul style="list-style: none; padding: 0; margin: 0;">
+                <li style="margin-bottom: var(--space-3);"><a href="/pages/villes/stockholm/" style="color: var(--color-primary); text-decoration: none;">Stockholm</a></li>
+                <li style="margin-bottom: var(--space-3);"><a href="/pages/villes/goteborg/" style="color: var(--color-primary); text-decoration: none;">Göteborg</a></li>
+                <li style="margin-bottom: var(--space-3);"><a href="/pages/villes/boras/" style="color: var(--color-primary); text-decoration: none;">Borås</a></li>
+                <li><a href="/pages/villes/" class="btn btn-secondary btn-sm" style="width: 100%; margin-top: var(--space-2);">Toutes les villes</a></li>
+              </ul>
+            </div>
+
+            <div class="card" style="padding: var(--space-6); margin-bottom: var(--space-6);">
+              <h3 style="margin-bottom: var(--space-4); font-size: var(--text-lg);">En bref</h3>
+              <ul style="list-style: none; padding: 0; margin: 0; font-size: var(--text-sm);">
+                <li style="margin-bottom: var(--space-2);">📍 Région : Halland (côte ouest)</li>
+                <li style="margin-bottom: var(--space-2);">🏫 Högskolan i Halmstad</li>
+                <li style="margin-bottom: var(--space-2);">🚆 Göteborg : ~1h30 en train</li>
+                <li style="margin-bottom: var(--space-2);">🏖️ Plage de Tylösand</li>
+                <li style="margin-bottom: var(--space-2);">🏌️ Golf de renommée internationale</li>
+                <li>🌊 Culture surf et sports nautiques</li>
+              </ul>
+            </div>
+
+            <div class="card" style="padding: var(--space-6); text-align: center; background: linear-gradient(135deg, var(--color-info-light) 0%, var(--color-background) 100%);">
+              <p style="font-weight: var(--font-semibold); margin-bottom: var(--space-4);">Halmstad est-elle faite pour vous ?</p>
+              <a href="/pages/outils/quiz/" class="btn btn-primary btn-sm btn-arrow">Faire le quiz</a>
+            </div>
+
+          </div>
+        </aside>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <span class="header-logo-text">🇸🇪 Vivre en <span>Suède</span></span>
+          <p>Le guide complet pour réussir votre expatriation.</p>
+        </div>
+        <div>
+          <h4 class="footer-title">Villes</h4>
+          <ul class="footer-links">
+            <li><a href="/pages/villes/stockholm/">Stockholm</a></li>
+            <li><a href="/pages/villes/goteborg/">Göteborg</a></li>
+            <li><a href="/pages/villes/malmo/">Malmö</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-title">Outils</h4>
+          <ul class="footer-links">
+            <li><a href="/pages/outils/convertisseur/">Convertisseur</a></li>
+            <li><a href="/pages/outils/budget/">Simulateur</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-title">À propos</h4>
+          <ul class="footer-links">
+            <li><a href="/pages/outils/quiz/">Quiz : Ma ville idéale</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Vivre en Suède</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="/js/main.js"></script>
+  <script>
+    var map = L.map('map').setView([56.6745, 12.8578], 13);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; OpenStreetMap contributors'
+    }).addTo(map);
+    L.marker([56.6745, 12.8578]).addTo(map)
+      .bindPopup('<strong>Halmstad</strong><br>Halland, Suède')
+      .openPopup();
+  </script>
+</body>
+</html>

@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="canonical" href="https://www.vivre-en-suede.com/pages/villes/uppsala/" />
+  <meta name="description" content="Guide complet pour vivre à Uppsala. Ville universitaire historique, quartiers, coût de la vie, emploi et conseils pour s'installer près de Stockholm.">
+  <title>Vivre à Uppsala - Guide complet pour expatriés | Vivre en Suède</title>
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="header-container">
+      <a href="/" class="header-logo"><span class="header-logo-text">🇸🇪 Vivre en <span>Suède</span></span></a>
+      <nav class="main-nav">
+        <ul>
+          <li class="nav-mega-dropdown">
+            <a href="/pages/preparer-depart/">Guides pratiques</a>
+            <div class="nav-mega-menu">
+              <div class="nav-mega-column">
+                <span class="nav-mega-title">S'installer</span>
+                <a href="/pages/preparer-depart/">Préparer son départ</a>
+                <a href="/pages/preparer-depart/compte-bancaire/">Ouvrir un compte bancaire</a>
+                <a href="/pages/preparer-depart/personnummer/">Obtenir le Personnummer</a>
+                <a href="/pages/preparer-depart/logement/">Trouver un logement</a>
+                <a href="/pages/preparer-depart/demenagement/">Déménagement</a>
+                <a href="/pages/preparer-depart/travail/">Travailler en Suède</a>
+                <a href="/pages/preparer-depart/creation-entreprise/">Création d'entreprise</a>
+              </div>
+              <div class="nav-mega-column">
+                <span class="nav-mega-title">Vie quotidienne</span>
+                <a href="/pages/cout-vie/">Coût de la vie</a>
+                <a href="/pages/fiscalite/">Fiscalité</a>
+                <a href="/pages/sante/">Santé</a>
+                <a href="/pages/education/">Éducation</a>
+              </div>
+            </div>
+          </li>
+          <li class="nav-dropdown">
+            <a href="/pages/villes/" class="active">Villes</a>
+            <div class="nav-dropdown-menu">
+              <a href="/pages/villes/stockholm/">Stockholm</a>
+              <a href="/pages/villes/goteborg/">Göteborg</a>
+              <a href="/pages/villes/malmo/">Malmö</a>
+              <a href="/pages/villes/uppsala/">Uppsala</a>
+              <a href="/pages/villes/linkoping/">Linköping</a>
+              <a href="/pages/villes/">Toutes les villes →</a>
+            </div>
+          </li>
+          <li class="nav-dropdown">
+            <a href="/pages/outils/">Outils</a>
+            <div class="nav-dropdown-menu">
+              <a href="/pages/outils/convertisseur/">Convertisseur EUR/SEK</a>
+              <a href="/pages/outils/ansokan/">Générateur d'Ansökan</a>
+              <a href="/pages/outils/budget/">Simulateur de budget</a>
+              <a href="/pages/outils/quiz/">Quiz : Où vivre ?</a>
+            </div>
+          </li>
+          <li><a href="/pages/a-propos/">À propos</a></li>
+        </ul>
+      </nav>
+      <a href="/pages/outils/quiz/" class="btn btn-primary btn-sm header-cta">Quiz : Ma ville idéale</a>
+      <button class="mobile-menu-toggle" aria-label="Ouvrir le menu"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <button class="mobile-menu-close" aria-label="Fermer le menu">&times;</button>
+    <ul>
+      <li class="mobile-nav-group">
+        <button class="mobile-nav-toggle">Guides pratiques <span class="mobile-nav-arrow">›</span></button>
+        <ul class="mobile-nav-sub">
+          <li class="mobile-nav-subtitle">S'installer</li>
+          <li><a href="/pages/preparer-depart/">Préparer son départ</a></li>
+          <li><a href="/pages/preparer-depart/compte-bancaire/">Compte bancaire</a></li>
+          <li><a href="/pages/preparer-depart/personnummer/">Personnummer</a></li>
+          <li><a href="/pages/preparer-depart/logement/">Logement</a></li>
+          <li><a href="/pages/preparer-depart/demenagement/">Déménagement</a></li>
+          <li><a href="/pages/preparer-depart/travail/">Travail</a></li>
+          <li><a href="/pages/preparer-depart/creation-entreprise/">Création d'entreprise</a></li>
+          <li class="mobile-nav-subtitle">Vie quotidienne</li>
+          <li><a href="/pages/cout-vie/">Coût de la vie</a></li>
+          <li><a href="/pages/fiscalite/">Fiscalité</a></li>
+          <li><a href="/pages/sante/">Santé</a></li>
+          <li><a href="/pages/education/">Éducation</a></li>
+        </ul>
+      </li>
+      <li class="mobile-nav-group">
+        <button class="mobile-nav-toggle">Villes <span class="mobile-nav-arrow">›</span></button>
+        <ul class="mobile-nav-sub">
+          <li><a href="/pages/villes/stockholm/">Stockholm</a></li>
+          <li><a href="/pages/villes/goteborg/">Göteborg</a></li>
+          <li><a href="/pages/villes/malmo/">Malmö</a></li>
+          <li><a href="/pages/villes/uppsala/">Uppsala</a></li>
+          <li><a href="/pages/villes/linkoping/">Linköping</a></li>
+          <li><a href="/pages/villes/">Toutes les villes →</a></li>
+        </ul>
+      </li>
+      <li class="mobile-nav-group">
+        <button class="mobile-nav-toggle">Outils <span class="mobile-nav-arrow">›</span></button>
+        <ul class="mobile-nav-sub">
+          <li><a href="/pages/outils/convertisseur/">Convertisseur EUR/SEK</a></li>
+          <li><a href="/pages/outils/ansokan/">Générateur d'Ansökan</a></li>
+          <li><a href="/pages/outils/budget/">Simulateur de budget</a></li>
+          <li><a href="/pages/outils/quiz/">Quiz : Où vivre ?</a></li>
+        </ul>
+      </li>
+      <li><a href="/pages/a-propos/">À propos</a></li>
+      <li><a href="/pages/outils/quiz/">Quiz : Ma ville idéale</a></li>
+    </ul>
+  </div>
+
+  <!-- CITY HERO -->
+  <section class="city-header" style="background-image: url('/images/uppsala-hero.jpg');">
+    <div class="city-header-overlay"></div>
+    <div class="container">
+      <div class="city-header-content">
+        <nav class="breadcrumb" style="margin-bottom: var(--space-4);">
+          <a href="/" style="color: rgba(255,255,255,0.8);">Accueil</a>
+          <span class="breadcrumb-separator" style="color: rgba(255,255,255,0.5);">›</span>
+          <a href="/pages/villes/" style="color: rgba(255,255,255,0.8);">Villes</a>
+          <span class="breadcrumb-separator" style="color: rgba(255,255,255,0.5);">›</span>
+          <span style="color: white;">Uppsala</span>
+        </nav>
+        <h1>Vivre à Uppsala</h1>
+        <p style="color: rgba(255,255,255,0.9); font-size: var(--text-lg); margin-bottom: var(--space-6);">La ville universitaire historique aux portes de Stockholm</p>
+        <div class="city-stats">
+          <div class="city-stat"><span class="city-stat-value">180 000</span><span class="city-stat-label">habitants</span></div>
+          <div class="city-stat"><span class="city-stat-value">-4° / 21°C</span><span class="city-stat-label">temp. moy.</span></div>
+          <div class="city-stat"><span class="city-stat-value">~10 500 SEK</span><span class="city-stat-label">budget/mois</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTENT -->
+  <section class="section">
+    <div class="container">
+      <div class="page-layout page-layout-right">
+
+        <main class="article-content">
+
+          <div class="article-author-intro">
+            <img src="/images/Ingrid-2026.png" alt="Ingrid" class="avatar avatar-lg">
+            <p>"Uppsala est une petite ville avec une grande âme. Fondée au XVe siècle, son université est la plus ancienne de Scandinavie. À seulement 40 minutes de Stockholm en train, c'est un cadre de vie exceptionnel pour les familles et les chercheurs."<br><span class="signature">— Ingrid</span></p>
+          </div>
+
+          <section id="pourquoi">
+            <h2>Pourquoi Uppsala ?</h2>
+            <p>Uppsala est la quatrième ville de Suède et la plus ancienne ville universitaire de Scandinavie (fondée en 1477). Située à 70 km au nord de Stockholm, elle offre un cadre de vie paisible tout en restant connectée à la capitale. Plus de 40 000 étudiants animent cette ville chargée d'histoire.</p>
+            <div class="pros-cons">
+              <div class="pros-list">
+                <h3>+ Avantages</h3>
+                <ul>
+                  <li>Ville universitaire dynamique et intellectuelle</li>
+                  <li>Stockholm à 40 min en train (pendulaire possible)</li>
+                  <li>Coût de la vie inférieur à Stockholm</li>
+                  <li>Riche patrimoine historique (cathédrale, château)</li>
+                  <li>Ville à taille humaine, très cyclable</li>
+                  <li>Recherche de pointe (biomédical, sciences)</li>
+                  <li>Ambiance conviviale et internationale</li>
+                </ul>
+              </div>
+              <div class="cons-list">
+                <h3>- Inconvénients</h3>
+                <ul>
+                  <li>Marché de l'emploi limité hors université et santé</li>
+                  <li>Logement étudiant très difficile à trouver</li>
+                  <li>Vie nocturne limitée hors période universitaire</li>
+                  <li>Hiver plus froid que Stockholm (-4°C en moyenne)</li>
+                  <li>Moins cosmopolite que les trois grandes villes</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+
+          <section id="quartiers">
+            <h2>Où habiter à Uppsala ?</h2>
+            <p>Uppsala est une ville compacte et facilement navigable à vélo :</p>
+            <div class="city-map" data-city="uppsala"><div class="city-map-placeholder">[Carte interactive des quartiers d'Uppsala]</div></div>
+            <div class="neighborhoods-grid">
+              <div class="neighborhood-card">
+                <div class="neighborhood-card-image" style="background-image: url('/images/uppsala-centrum.jpg');"></div>
+                <div class="neighborhood-card-body">
+                  <h4>Centrum</h4>
+                  <p>Coeur historique avec la cathédrale, le château et la rivière Fyrisån. Commerces, restaurants et vie étudiante.</p>
+                  <div class="neighborhood-tags"><span class="badge badge-secondary">Central</span><span class="badge badge-secondary">8 000-12 000 SEK</span></div>
+                </div>
+              </div>
+              <div class="neighborhood-card">
+                <div class="neighborhood-card-image" style="background-image: url('/images/uppsala-luthagen.jpg');"></div>
+                <div class="neighborhood-card-body">
+                  <h4>Luthagen</h4>
+                  <p>Quartier résidentiel prisé au nord-ouest. Proche de l'université et du parc Stadsskogen. Calme et verdoyant.</p>
+                  <div class="neighborhood-tags"><span class="badge badge-primary">Résidentiel</span><span class="badge badge-secondary">8 500-11 500 SEK</span></div>
+                </div>
+              </div>
+              <div class="neighborhood-card">
+                <div class="neighborhood-card-image" style="background-image: url('/images/uppsala-falhagen.jpg');"></div>
+                <div class="neighborhood-card-body">
+                  <h4>Fålhagen</h4>
+                  <p>Quartier en plein renouveau à l'est de la gare. Nouveaux logements, cafés branchés. En pleine gentrification.</p>
+                  <div class="neighborhood-tags"><span class="badge badge-accent">Émergent</span><span class="badge badge-secondary">7 000-10 000 SEK</span></div>
+                </div>
+              </div>
+              <div class="neighborhood-card">
+                <div class="neighborhood-card-image" style="background-image: url('/images/uppsala-savja.jpg');"></div>
+                <div class="neighborhood-card-body">
+                  <h4>Sävja</h4>
+                  <p>Quartier familial au sud-est. Logements plus grands et abordables, bonnes écoles, espaces verts.</p>
+                  <div class="neighborhood-tags"><span class="badge badge-primary">Familial</span><span class="badge badge-secondary">6 500-9 000 SEK</span></div>
+                </div>
+              </div>
+              <div class="neighborhood-card">
+                <div class="neighborhood-card-image" style="background-image: url('/images/uppsala-gottsunda.jpg');"></div>
+                <div class="neighborhood-card-body">
+                  <h4>Gottsunda</h4>
+                  <p>Quartier multiculturel au sud-ouest. Loyers les plus abordables d'Uppsala. Proche de la nature et du SLU.</p>
+                  <div class="neighborhood-tags"><span class="badge badge-success">Abordable</span><span class="badge badge-secondary">5 500-7 500 SEK</span></div>
+                </div>
+              </div>
+              <div class="neighborhood-card">
+                <div class="neighborhood-card-image" style="background-image: url('/images/uppsala-sunnersta.jpg');"></div>
+                <div class="neighborhood-card-body">
+                  <h4>Sunnersta</h4>
+                  <p>Quartier résidentiel calme au sud, en bord de rivière. Résidences étudiantes et logements familiaux.</p>
+                  <div class="neighborhood-tags"><span class="badge badge-primary">Calme</span><span class="badge badge-secondary">6 000-8 500 SEK</span></div>
+                </div>
+              </div>
+            </div>
+            <div class="callout callout-conseil">
+              <div class="callout-title">Conseil logement</div>
+              <p class="callout-content">Le logement étudiant à Uppsala est notoirement difficile à trouver. Inscrivez-vous sur Uppsalahem et la file d'attente de Akademiska Hus dès que possible. Pour les familles, Luthagen et Sävja sont les meilleurs choix.</p>
+              <span class="signature">— Ingrid</span>
+            </div>
+          </section>
+
+          <section id="cout-vie">
+            <h2>Coût de la vie à Uppsala</h2>
+            <p>Uppsala est moins chère que Stockholm, surtout hors du centre-ville :</p>
+            <table class="price-table">
+              <thead><tr><th>Dépense</th><th>Célibataire</th><th>Couple</th><th>Famille (2 enf.)</th></tr></thead>
+              <tbody>
+                <tr><td>Logement</td><td>7 000 SEK</td><td>10 000 SEK</td><td>12 500 SEK</td></tr>
+                <tr><td>Alimentation</td><td>3 200 SEK</td><td>5 000 SEK</td><td>7 500 SEK</td></tr>
+                <tr><td>Transport (UL)</td><td>790 SEK</td><td>1 580 SEK</td><td>1 580 SEK</td></tr>
+                <tr><td>Loisirs</td><td>1 800 SEK</td><td>2 800 SEK</td><td>3 500 SEK</td></tr>
+                <tr><td>Autres</td><td>1 200 SEK</td><td>2 000 SEK</td><td>2 800 SEK</td></tr>
+                <tr style="background: var(--color-gray-lighter); font-weight: bold;"><td>TOTAL</td><td>~14 000 SEK<br><small>(~1 220 €)</small></td><td>~21 400 SEK<br><small>(~1 860 €)</small></td><td>~27 900 SEK<br><small>(~2 425 €)</small></td></tr>
+              </tbody>
+            </table>
+          </section>
+
+          <section id="travail">
+            <h2>Travailler à Uppsala</h2>
+            <p>L'université et le secteur de la santé dominent le marché de l'emploi local.</p>
+            <h3>Secteurs qui recrutent</h3>
+            <ul>
+              <li><strong>Université :</strong> Uppsala Universitet (recherche, enseignement, administration)</li>
+              <li><strong>Sciences de la vie :</strong> GE Healthcare, Cytiva, nombreuses biotech</li>
+              <li><strong>Santé :</strong> Akademiska sjukhuset (hôpital universitaire)</li>
+              <li><strong>Agriculture :</strong> SLU (université des sciences agricoles)</li>
+              <li><strong>Pendulaire Stockholm :</strong> 40 min en train, accès au marché de la capitale</li>
+            </ul>
+            <h3>Salaires moyens à Uppsala</h3>
+            <table class="price-table">
+              <thead><tr><th>Métier</th><th>Salaire annuel brut</th></tr></thead>
+              <tbody>
+                <tr><td>Chercheur universitaire</td><td class="price">450 000 - 600 000 SEK</td></tr>
+                <tr><td>Ingénieur biomédical</td><td class="price">480 000 - 620 000 SEK</td></tr>
+                <tr><td>Développeur</td><td class="price">480 000 - 620 000 SEK</td></tr>
+                <tr><td>Infirmier</td><td class="price">350 000 - 420 000 SEK</td></tr>
+                <tr><td>Enseignant</td><td class="price">340 000 - 420 000 SEK</td></tr>
+              </tbody>
+            </table>
+            <div class="callout callout-info">
+              <div class="callout-title">Sites d'emploi recommandés</div>
+              <p class="callout-content"><strong>Arbetsförmedlingen</strong>, <strong>LinkedIn</strong>, <strong>uu.se/jobb</strong> (emplois universitaires), <strong>Indeed.se</strong>, <strong>Akademikernas a-kassa</strong></p>
+            </div>
+          </section>
+
+          <section id="ecoles">
+            <h2>Écoles et crèches</h2>
+            <p>Uppsala offre d'excellentes écoles publiques et quelques options internationales.</p>
+            <h3>Écoles internationales</h3>
+            <ul>
+              <li><strong>Uppsala International School</strong> - Programme IB, enseignement en anglais</li>
+              <li><strong>Internationella Engelska Skolan Uppsala</strong> - Bilingue suédois-anglais</li>
+              <li><strong>Katedralskolan</strong> - Lycée historique avec programme IB</li>
+            </ul>
+            <div class="callout callout-conseil">
+              <div class="callout-title">Conseil</div>
+              <p class="callout-content">Il n'y a pas de lycée français à Uppsala. La plupart des familles françaises inscrivent leurs enfants dans le système public suédois, qui est gratuit et de très bonne qualité, ou à l'Uppsala International School.</p>
+              <span class="signature">— Ingrid</span>
+            </div>
+          </section>
+
+          <section id="activites">
+            <h2>Que faire à Uppsala ?</h2>
+            <h3>Activités gratuites</h3>
+            <ul>
+              <li>Visiter la cathédrale d'Uppsala (plus grande église de Scandinavie)</li>
+              <li>Se promener dans le parc Stadsskogen</li>
+              <li>Explorer les tumulus royaux de Gamla Uppsala (site viking)</li>
+              <li>Flâner le long de la rivière Fyrisån</li>
+              <li>Faire du vélo dans la campagne environnante</li>
+            </ul>
+            <h3>Incontournables</h3>
+            <ul>
+              <li>Uppsala Slott (château du XVIe siècle)</li>
+              <li>Gustavianum (musée de l'université avec amphithéâtre anatomique)</li>
+              <li>Linné-museet (jardin botanique de Carl von Linné)</li>
+              <li>Traditions étudiantes (Valborg le 30 avril, nations étudiantes)</li>
+            </ul>
+            <h3>Communauté francophone</h3>
+            <ul>
+              <li>Français à Uppsala (groupe Facebook)</li>
+              <li>Nation française à l'université</li>
+              <li>Événements francophones à Stockholm (accessible en 40 min)</li>
+            </ul>
+          </section>
+
+          <div class="text-center py-12">
+            <p class="lead mb-6">Des questions sur Uppsala ?</p>
+            <a href="/pages/outils/quiz/" class="btn btn-primary btn-lg btn-arrow">Trouver ma ville idéale</a>
+          </div>
+
+        </main>
+
+        <aside class="page-sidebar-right">
+          <div class="sidebar-sticky">
+            <div class="toc">
+              <h3 class="toc-title">Sur cette page</h3>
+              <ul class="toc-list">
+                <li><a href="#pourquoi">Pourquoi Uppsala ?</a></li>
+                <li><a href="#quartiers">Où habiter</a></li>
+                <li><a href="#cout-vie">Coût de la vie</a></li>
+                <li><a href="#travail">Travailler</a></li>
+                <li><a href="#ecoles">Écoles</a></li>
+                <li><a href="#activites">Que faire</a></li>
+              </ul>
+            </div>
+            <div class="card mt-6" style="padding: var(--space-5);">
+              <h4 style="margin-bottom: var(--space-3);">Autres villes</h4>
+              <ul style="list-style: none; padding: 0; margin: 0; font-size: var(--text-sm);">
+                <li style="margin-bottom: var(--space-2);"><a href="/pages/villes/stockholm/">Stockholm</a></li>
+                <li style="margin-bottom: var(--space-2);"><a href="/pages/villes/goteborg/">Göteborg</a></li>
+                <li style="margin-bottom: var(--space-2);"><a href="/pages/villes/malmo/">Malmö</a></li>
+                <li><a href="/pages/villes/">Voir toutes →</a></li>
+              </ul>
+            </div>
+          </div>
+        </aside>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <span class="header-logo-text">🇸🇪 Vivre en <span>Suède</span></span>
+          <p>Le guide complet pour réussir votre expatriation.</p>
+        </div>
+        <div>
+          <h4 class="footer-title">Villes</h4>
+          <ul class="footer-links">
+            <li><a href="/pages/villes/stockholm/">Stockholm</a></li>
+            <li><a href="/pages/villes/goteborg/">Göteborg</a></li>
+            <li><a href="/pages/villes/malmo/">Malmö</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-title">Outils</h4>
+          <ul class="footer-links">
+            <li><a href="/pages/outils/convertisseur/">Convertisseur</a></li>
+            <li><a href="/pages/outils/budget/">Simulateur</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-title">À propos</h4>
+          <ul class="footer-links">
+            <li><a href="/pages/outils/quiz/">Quiz : Ma ville idéale</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Vivre en Suède</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/main.js"></script>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  <script src="/js/city-maps.js"></script>
+</body>
+</html>
