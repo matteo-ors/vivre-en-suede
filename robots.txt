@@ -3,13 +3,49 @@
 User-agent: *
 Allow: /
 
-# Bloquer les répertoires non pertinents pour le SEO
+# Bloquer les fichiers de développement et configuration
 Disallow: /node_modules/
 Disallow: /.env
 Disallow: /.git/
+Disallow: /.gitignore
+Disallow: /.htaccess
 Disallow: /generate-images.js
+Disallow: /generate-swedish-images.js
+Disallow: /gen_cities.py
+Disallow: /generation-log.txt
 Disallow: /package.json
 Disallow: /package-lock.json
+
+# Bloquer la page 404 de l'indexation
+Disallow: /404.html
+
+# Bloquer les fichiers système
+Disallow: /.DS_Store
+
+# Crawl-delay pour ne pas surcharger le serveur
+Crawl-delay: 1
+
+# Bots IA - bloquer le scraping de contenu
+User-agent: GPTBot
+Disallow: /
+
+User-agent: ChatGPT-User
+Disallow: /
+
+User-agent: CCBot
+Disallow: /
+
+User-agent: anthropic-ai
+Disallow: /
+
+User-agent: Google-Extended
+Disallow: /
+
+User-agent: Bytespider
+Disallow: /
+
+User-agent: ClaudeBot
+Disallow: /
 
 # Sitemap
 Sitemap: https://www.vivre-en-suede.com/sitemap.xml
